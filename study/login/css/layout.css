@@ -1,53 +1,70 @@
 @import 'common.css';
 
-/* 공통 css */
-
-#left-area, #right-area{border: 1px solid black;}
-.login-container .login-area input , .login-container .pass-area input{ height: 50px;}
-.login-container ul>.const{border: 1px solid rgba(0, 0, 0, .7); cursor: pointer;}
-
-/* 좌측 영역 */
-#left-area{width: 1200px; height: 500px; 
-  position: absolute; left: 15%; top: 50%;
-  transform: translate(-15%, -50%);
-  background-color: lightcoral;
+body {
+  background-color: #8FBC8F;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  text-align: center;
+  position: relative;
+  height: 100vh;
 }
-#left-area h1{width: 200px;}
-#left-area h1 img{width: 100%;}
-#left-area ul{}
-#left-area ul li{}
-#left-area ul li:nth-of-type(1){}
-#left-area ul li:nth-of-type(2){}
-#left-area ul li:nth-of-type(2) span{}
-#left-area ul li:nth-of-type(2) .value{}
-#left-area ul li:nth-of-type(2) .up{}
-
-
-/* 우측 영역 */
-#right-area{width: 450px; height: 680px; 
-  background-color: lightblue; 
-  position: absolute; top: 50%; right: 25%;
-  transform: translate(-25%, -50%);  
-   box-shadow: 2px 0 10px rgba(0,0,0,.1);}
-#right-area form{
-  height: 450px;
-  width: 340px;
-  margin: 114px auto;
+main{
+  width: 100%;
 }
 
-#right-area form .login-title{position: relative; margin-bottom: 20px;}
-#right-area form .login-title span{font-size: 40px;}
-#right-area form .login-title span::before{content: ''; background: url(../images/logo_01.png) no-repeat; background-size: contain; width: 30px;height: 30px; position: absolute; top: 0; right: 115px;}
+form {
+  width: 400px;
+  height: 500px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 40px 30px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+}
+.login-title{
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.login-container ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login-container ul li{
+  margin-bottom: 16px;
+  width: 100%;
+}
+.login-container ul li label i{font-size: 20px;}
+label {
+  display: block;
+}
+.login-container ul li input{
+  width: 100%;
+  padding: 8px;
+}
+.login-container ul li input[type="password"]::placeholder,
+.login-container ul li input[type="text"]::placeholder {
+  text-align: center;
+  width: 100%;
+  font-size: 1.5em;
+  font-family: 'Roboto', sans-serif; 
+}
+.check-box{overflow: hidden; text-align: left;}
+.check-box input{
+  width: 20px; height: 20px; float: left; margin-right: 10px;
+}
+.check-box::before{content: ''; display: block; clear: both;}
 
-#right-area form .login-container{ padding: 40px 0; border-top: 2px solid #b94949; border-bottom: 2px solid #b94949;}
-#right-area form .login-container li{margin-bottom: 10px;}
-#right-area form .login-container .login-area{}
-#right-area form .login-container .pass-area{}
-#right-area form .login-container .login-btn{text-align: center;}
-#right-area form .login-container .login-btn button{padding: 15px; width: 100%; background: #b94949; font-size: 20px; color: #fff; font-weight: 700; border-radius: 10px;}
-#right-area form .login-container .check-box{}
 
-#right-area form .etc-area{}
-#right-area form .etc-area li{}
-#right-area form .etc-area li:nth-of-type(1){}
-#right-area form .etc-area li:nth-of-type(2){}
+button {
+  background-color: #008000;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
