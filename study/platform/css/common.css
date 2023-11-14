@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+*{box-sizing: border-box;}
+html, body{width: 100%; height: 100vh;}
+
+/* 여백 초기화 */
+body,div,ul,li,dl,dd,dt,ol,h1,h2,h3,h4,h5,h6,input,fieldset,legend,p,select,
+table,th,td,tr,textarea,button,form,figure,figcaption{margin:0;padding:0;}
+
+/* a 링크 초기화 */
+a, a:hover {text-decoration: none; color: #333;}
+
+/* 폰트 초기화 */
+body, input, textarea, select, button, table 
+{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Roboto', sans-serif; 
+}
+
+/* 블릿기호 초기화 */
+ul,li,ol {list-style: none;}
+
+/* 제목 태그 초기화 */
+h1,h2,h3,h4,h5,h6 {font-size:1rem; font-weight: 500; display:inline-block;}
+
+button{border: 0;}
+
+img, video{width:100%;}
+img {vertical-align: top;}
+img {border:0;} 
+
+.hidden { position: absolute; left: -1000%; top: 0; width: 1px; height: 1px; overflow: hidden; color: #fff;}
+
