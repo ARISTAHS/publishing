@@ -9,41 +9,39 @@
   <script src="https://kit.fontawesome.com/ef15d6eb6f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <main>
-    <form action="#" method="post">
-
-      <h1 class="login-title">Log In</h1>
+  <div id="wrap">
+    <h1>
+      좋은일컴퍼니 영업관리 시스템<br>
+      <span>VALUE</span> <span>UP!</span> v1.0
+    </h1>
     
+    <form action="#" method="post">
+      <p class="login-title">Log In</p>
       <div class="login-container">
         <ul>
           <li class="login-area">
-            <label for="id"><i class="fa-solid fa-user"></i></label>
-            <input type="text" placeholder="ID" name="id" required>
+            <input type="text" placeholder="ID" required>
           </li>
           <li class="pass-area">
-            <label for="pass"><i class="fa-solid fa-lock"></i></label>
-            <input type="password" placeholder="Password" name="pass" required>
+            <input type="password" placeholder="Password" required>
           </li>
         </ul>
         
         <button class="login-btn" type="submit">Log In</button>
         
         <div class="check-box">
-          <input type="checkbox" name="remember">Remember me
+          <input name="box" type="checkbox" name="remember">
+          <label for="box">Remember ID</label>
         </div>
       </div>
-
-      <ul class="etc-area">
-        <li>
-          <a href="#"><span>Forgot Login?</span></a>
-        </li>
-        <li>
-          <a href="#">Sign up</a>
-        </li>
-      </ul>
     </form>
-  </main>
 
-  <script src=""></script>
+    <footer id="footerArea">
+			<address class="address">기술지원 도움이 필요하시면 <a href="mailto:airsung@coachjob.net">airsung@coachjob.net</a>으로 문의주시기 바랍니다. <br>
+      <span class="copyright">Copyright © WEDAS Company All Right Reserved.</span>
+      </address>
+		</footer>
+  </div>
+
 </body>
 </html>
