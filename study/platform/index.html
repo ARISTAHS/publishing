@@ -11,77 +11,104 @@
 <body>
   <header>
     <h1></h1>
-    <div>
-      <select name="" id="">
+    <div class="total-search">  <!-- select 항목 태그 옵션 설정해야함 -->
+      <select name="부서 선택" required id="">
+        <option selected>부서 선택</option>
         <option value="">HRD사업본부</option>
         <option value="">기획서비스본부</option>
       </select>
-      <select name="" id="">
-        <option value="">백승아</option>
-        <option value="">서지수</option>
+      <select name="담당자 선택" required id="">
+        <option selected>담당자 선택</option>
+        <option value=""><span>백승아 팀장</span></option>
+        <option value=""><span>서지수 사원</span></option>
       </select>
-      <div>
+      <div class="search-area">
         <form action="#" method="post">
-          <input type="search" name="search-input">
           <label for="search-input"></label>
-
-          <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>  <!--돋보기 아이콘 들어갈 계획-->
+          <input type="search" id="search-input" placeholder="고객명 검색">
+          <button type="button">
+            <span class="hidden">검색</span>
+          </button>  <!--돋보기 아이콘 들어갈 계획-->
         </form>
       </div>
     </div>
-    <ul>
+    <ul class="etc-area">
       <li>통합 관리자</li>
-      <li><i class="fa-solid fa-gear"></i></li> <!--setting 아이콘 들어갈 계획-->
-      <li><i class="fa-solid fa-arrow-right-from-bracket"></i></li> <!--logout 아이콘 들어갈 계획-->
+      <li>
+        <a href="#"><i class="fa-solid fa-gear"></i> </a>
+      </li> <!--setting 아이콘 들어갈 계획-->
+      <li>
+        <a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+      </li> <!--logout 아이콘 들어갈 계획-->
     </ul>
   </header>
 
-  <nav class="sideNav">
-    <a href="#"><img src="" alt="햄버거메뉴"></a> <!--햄버거 아이콘 들어갈 계획-->
-    <ul>
+  <nav class="sideNav"> <!--class를 id로 교체 후 class 별도 설정-->
+    <a class="menu" href="#"><span>side menu</span></a> 
+    <a class="menuClose" href="#"><span>side menu close</span></a>
+   
+    <ul class="sideNav-area">
       <li>
         <dl>
-          <dt>관리자 설정</dt>
-          <dd>부서 관리</dd>
-          <dd>영업 담당자 관리</dd>
-          <dd>영업상품 관리</dd>
-          <dd>고객등급 관리</dd>
-          <dd>공지사항 관리</dd>
+          <dt class="list-title">관리자 설정</dt>
+          <dd>
+            <ul>
+              <li class="menu-list"><a href="#">부서 관리</a></li>
+              <li class="menu-list"><a href="#">영업 담당자 관리</a></li>
+              <li class="menu-list"><a href="#">영업상품 관리</a></li>
+              <li class="menu-list"><a href="#">고객등급 관리</a></li>
+              <li class="menu-list"><a href="#">공지사항 관리</a></li>
+            </ul>
+          </dd>
         </dl>
       </li>
       <li>
         <dl>
-          <dt>고객 관리</dt>
-          <dd>고객 등록</dd>
-          <dd>고객 리스트</dd>
-          <dd>상담일정 캘린더</dd>
+          <dt class="list-title">고객 관리</dt>
+          <dd>
+            <ul>
+              <li class="menu-list"><a href="#">고객 등록</a></li>
+              <li class="menu-list"><a href="#">고객 리스트</a></li>
+              <li class="menu-list"><a href="#">상담일정 캘린더</a></li>
+            </ul>
+          </dd>
         </dl>
       </li>
       <li>
         <dl>
-          <dt>영업 관리</dt>
-          <dd>영업일지 현황</dd>
-          <dd>영업상품 현황</dd>
-          <dd>영업진행 현황</dd>
+          <dt class="list-title">영업 관리</dt>
+          <dd>
+            <ul>
+              <li class="menu-list"><a href="#">영업일지 현황</a></li>
+              <li class="menu-list"><a href="#">영업상품 현황</a></li>
+              <li class="menu-list"><a href="#">영업진행 현황</a></li>
+            </ul>
+          </dd>
         </dl>
       </li>
       <li>
         <dl>
-          <dt>통계관리</dt>
-          <dd>통계 1</dd>
-          <dd>통계 2</dd>
+          <dt class="list-title">통계관리</dt>
+          <dd>
+            <ul>
+              <li class="menu-list"><a href="#">통계 1</a></li>
+              <li class="menu-list"><a href="#">통계 2</a></li>
+            </ul>
+          </dd>
         </dl>
       </li>
     </ul>
   </nav>
 
   <main>
-    <nav class="topNav">
-       상단nav 영역표시
-    </nav>
-  
+    <div class="dash-board">
+      <p>대쉬보드 페이지 위치 정보 노출 단입니다.</p>
+      <p><span>VALUE</span>&nbsp;<span>UP!</span>&nbsp;v1.0</p>
+   </div>
 
-    <button type="button">TOP</button>
+   
+  
+    <a href="#" class="topMove"><span>TOP</span></a>
   </main>
 
   <footer id="footerArea">
