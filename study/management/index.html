@@ -121,7 +121,7 @@
         <table>
           <tbody>
             <tr class="client-kind">
-              <th scope="row">고객 분류</th>
+              <th scope="row"><span>고객 분류</span></th>
               <td>
                 <input type="checkbox">&nbsp;<span>학교</span>
                 <input type="checkbox">&nbsp;<span>협회·단체</span>
@@ -130,7 +130,7 @@
               </td>
             </tr>
             <tr class="client-type">
-              <th scope="row">고객 유형</th>
+              <th scope="row"><span>고객 유형</span></th>
               <td>
                 <input type="checkbox">&nbsp;<span>최초 고객</span>
                 <input type="checkbox">&nbsp;<span>잠재 고객</span>
@@ -142,16 +142,16 @@
               </td>
             </tr>
             <tr class="company-name">
-              <th scope="row">업체명</th>
+              <th scope="row"><span>업체명</span></th>
               <td>
                 <input type="number" placeholder="숫자를 입력하세요">
               </td>
             </tr>
             <tr class="company-number">
-              <th scope="row">사업자등록번호</th>
+              <th scope="row"><span>사업자등록번호</span></th>
               <td>
-                <input type="number" placeholder="숫자를 입력하세요">
-                <input type="submit" value="중복 체크">
+                <input id="number-check" type="number" placeholder="숫자를 입력하세요">
+                <label for="number-check">중복체크</label>
               </td>
             </tr>
             <tr class="company-proof">
@@ -162,7 +162,7 @@
               </td>
             </tr>
             <tr class="zone">
-              <th scope="row">지역구분</th>
+              <th scope="row"><span>지역구분</span></th>
               <td>
                 <select name="선택" required id="">
                   <option selected>선택</option>
@@ -189,7 +189,7 @@
 
         <div class="table-btn">
           <button type="button" onclick="">등록</button>
-          <button type="reset" onclick="">취소</button>
+          <button class="reset" type="reset" onclick="">취소</button>
         </div>
       </div>
     </section>

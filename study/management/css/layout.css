@@ -71,22 +71,38 @@ main{height: 100%; background-color: #ccc;   grid-area: ma; position: relative;}
 
 section{width: 100%; height: 100%;}
 
-.guide{display: grid; grid-template-rows: 1fr; grid-row-gap: 15px; margin: 15px 0 15px 10px; padding: 10px 0 10px 10px; border: 1px solid red;}
+.guide{display: grid; grid-template-rows: 1fr; grid-row-gap: 15px; margin: 15px 15px 0px 10px; padding: 10px; border: 1px solid red;}
 .guide li span{display: inline-block; padding-left: 10px;}
 
-.table-area h3{ font-size: 1.2em; font-weight: 700; margin-left: 50px;}
-.table-area table{margin-left: 30px;}
-.table-area table tr{}
+.table-area{margin-top: 40px; }
+.table-area h3{ font-size: 1.3em; font-weight: 700; margin-left: 40px; position: relative}
+.table-area table{width: 98.5%; margin:20px 20px 80px 10px; border: 1px solid #666; border-collapse:collapse;}
 
+.table-area table tr th{ width: 200px; border-right: 1px solid #666; }
+.table-area table tr th span{position: relative;}
+.table-area table tr th span::after, .table-area h3 span::after{content: ''; display: block; width:5px; height: 5px; border-radius: 50%; background-color: red; position: absolute; top: 50%; right: -15px; transform: translateY(-50%);}
+.table-area table tr th, .table-area table tr td{padding: 10px 30px; border-bottom: 1px solid #666; text-align: left;}
+
+.table-area table .client-kind td span, .table-area table .client-type td span{margin-right: 20px;} 
+.table-area table .client-kind td span:first-child{margin-right: 56px;}
+.table-area table .client-kind td span:nth-of-type(3){margin-right: 24px;}
+.table-area table .company-name td input, .table-area table .company-number td input, .table-area table .zone td select {width: 300px; height: 40px; padding: 10px 20px;}
+.table-area table .company-number td{display: flex; align-items: center;}
+.table-area table tr td label{width: 150px; height: 40px; padding: 10px 20px; display: block; text-align: center; border: 1px solid black; background-color: #000; color: #fff; cursor: pointer;}
+
+.table-area table tr:last-child th, .table-area table tr:last-child td{border-bottom: none;}
+.table-area table tr:last-child td{display: grid; grid-template-columns: 150px 150px auto; grid-gap: 10px 10px;}
+.table-area table tr:last-child td input{height: 40px; text-align: center; cursor: pointer;}
+.table-area table tr:last-child td input:last-child{grid-column: 1/4; text-align: center;}
+
+.table-area .table-btn{display: flex; align-items: center; justify-content: center; gap: 50px;}
+.table-area .table-btn button{width: 200px; height: 50px; border: 1px solid blue; background-color: blue; color: #fff; border-radius: 5px; cursor: pointer;}
+.table-area .table-btn .reset{border: 1px solid #666; background-color: #666;}
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button{ 
   -webkit-appearance: none; margin: 0;
 }
-
-
-
-
 
 .topMove{width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; position: fixed; right: 25px; bottom: 100px; border-radius: 50%; border: 1px solid red; cursor: pointer; z-index: 10;}
 /* 본문 main 영역 end*/
