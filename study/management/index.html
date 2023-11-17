@@ -9,17 +9,17 @@
 </head>
 <body>
   <header>
-    <h1></h1>
+    <h1><a href="#"></a></h1>
     <div class="total-search">    <!-- select 항목 태그 옵션 설정해야함 -->
       <select name="부서 선택" required id="">
         <option selected>부서 선택</option>
-        <option value="">HRD사업본부</option>
-        <option value="">기획서비스본부</option>
+        <option value="1">HRD사업본부</option>
+        <option value="2">기획서비스본부</option>
       </select>
       <select name="담당자 선택" required id="">
         <option selected>담당자 선택</option>
-        <option value=""><span>백승아 팀장</span></option>
-        <option value=""><span>서지수 사원</span></option>
+        <option value="1"><span>백승아 팀장</span></option>
+        <option value="2"><span>서지수 사원</span></option>
       </select>
       <div class="search-area">
         <form action="#" method="post">
@@ -144,13 +144,13 @@
             <tr class="company-name">
               <th scope="row"><span>업체명</span></th>
               <td>
-                <input type="number" placeholder="숫자를 입력하세요">
+                <input type="number" placeholder="숫자를 입력하세요"  onfocus="this.placeholder = ''" onblur="this.placeholder='숫자를 입력하세요.'">
               </td>
             </tr>
             <tr class="company-number">
               <th scope="row"><span>사업자등록번호</span></th>
               <td>
-                <input id="number-check" type="number" placeholder="숫자를 입력하세요">
+                <input id="number-check" type="number" placeholder="숫자를 입력하세요" onfocus="this.placeholder = ''" onblur="this.placeholder='숫자를 입력하세요.'">
                 <label for="number-check">중복체크</label>
               </td>
             </tr>
@@ -166,12 +166,12 @@
               <td>
                 <select name="선택" required id="">
                   <option selected>선택</option>
-                  <option value="">서울</option>
-                  <option value="">경기도</option>
-                  <option value="">충청도</option>
-                  <option value="">강원도</option>
-                  <option value="">전라도</option>
-                  <option value="">경상도</option>
+                  <option value="서울">서울</option>
+                  <option value="경기도">경기도</option>
+                  <option value="충청도">충청도</option>
+                  <option value="강원도">강원도</option>
+                  <option value="전라도">전라도</option>
+                  <option value="경상도">경상도</option>
                 </select>
               </td>
             </tr>
@@ -179,9 +179,9 @@
               <th scope="row">주소</th>
               <td>
                 <input type="button" onclick=""  value="우편번호 검색">
-                <input type="button" value="우편번호">
-                <input type="text" value="우편번호 검색을 통해서 주소를 선택해주세요.">
-                <input type="text" value="상세주소 입력">
+                <input type="text" placeholder="우편번호">
+                <input type="text" placeholder="우편번호 검색을 통해서 주소를 선택해주세요.">
+                <input type="text" placeholder="상세주소 입력" onfocus="this.placeholder = ''" onblur="this.placeholder='상세주소 입력'">
               </td>
             </tr>
           </tbody>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고객리스트</title>
+  <link rel="stylesheet" href="css/layout.css">
+  <script src="https://kit.fontawesome.com/ef15d6eb6f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1><a href="#"><span class="hidden">로고</span></a></h1>
+    <div class="total-search">    <!-- select 항목 태그 옵션 설정해야함 -->
+      <select name="부서 선택" required id="">
+        <option selected>부서 선택</option>
+        <option value="1">HRD사업본부</option>
+        <option value="2">기획서비스본부</option>
+      </select>
+      <select name="담당자 선택" required id="">
+        <option selected>담당자 선택</option>
+        <option value="1"><span>백승아 팀장</span></option>
+        <option value="2"><span>서지수 사원</span></option>
+      </select>
+      <div class="search-area">
+        <form action="#" method="post">
+          <label for="search-input"></label>
+          <input type="search" id="search-input" placeholder="고객명 검색">
+          <button type="button">
+            <span class="hidden">검색</span>
+          </button>  <!--돋보기 아이콘 들어갈 계획-->
+        </form>
+      </div>
+    </div>
+    <ul class="etc-area">
+      <li>통합 관리자</li>
+      <li>
+        <a href="#"><i class="fa-solid fa-gear"></i> </a>
+      </li> <!--setting 아이콘 들어갈 계획-->
+      <li>
+        <a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+      </li> <!--logout 아이콘 들어갈 계획-->
+    </ul>
+  </header>
+
+  <nav class="sideNav"> <!--class를 id로 교체 후 class 별도 설정-->
+    <a class="menu" href="#"><span>side menu</span></a> 
+    <a class="menuClose" href="#"><span>side menu close</span></a>
+   
+    <ul class="sideNav-area">
+      <li>
+        <dl>
+          <dt class="list-title">관리자 설정</dt>
+          <dd>
+            <ul>
+              <li class="menu-list"><a href="#">부서 관리</a></li>
+              <li class="menu-list"><a href="#">영업 담당자 관리</a></li>
+              <li class="menu-list"><a href="#">영업상품 관리</a></li>
+              <li class="menu-list"><a href="#">고객등급 관리</a></li>
+              <li class="menu-list"><a href="#">공지사항 관리</a></li>
+            </ul>
+          </dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt class="list-title">고객 관리</dt>
+          <dd>
+            <ul>
+              <li class="menu-list"><a href="#">고객 등록</a></li>
+              <li class="menu-list"><a href="#">고객 리스트</a></li>
+              <li class="menu-list"><a href="#">상담일정 캘린더</a></li>
+            </ul>
+          </dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt class="list-title">영업 관리</dt>
+          <dd>
+            <ul>
+              <li class="menu-list"><a href="#">영업일지 현황</a></li>
+              <li class="menu-list"><a href="#">영업상품 현황</a></li>
+              <li class="menu-list"><a href="#">영업진행 현황</a></li>
+            </ul>
+          </dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt class="list-title">통계관리</dt>
+          <dd>
+            <ul>
+              <li class="menu-list"><a href="#">통계 1</a></li>
+              <li class="menu-list"><a href="#">통계 2</a></li>
+            </ul>
+          </dd>
+        </dl>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="dash-board">
+       <p>대쉬보드 페이지 위치 정보 노출 단입니다.</p>
+       <p><span>VALUE</span>&nbsp;<span>UP!</span>&nbsp;v1.0</p>
+    </div>
+
+    <section>
+      <ul class="guide">
+        <li>
+          <i class="fa-solid fa-check"></i><span>영업관리를 위해 등록하신 전체 고객 리스트를 확인하실 수 있습니다.</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i><span>고객명을 클릭하시면, '고객정보 홈'으로 이동합니다.</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-check"></i><span>매출액은 영업상품의 진행 상태 중 '수주 확정'매출액을 합산한 값입니다.</span>
+        </li>
+      </ul>
+
+      <!-- 본문 영역 -->
+      <div class="detail-area">
+        <div class="detail-option">
+          <dl>
+            <dt>고객 분류</dt>
+            <dd>
+              <ul>
+                <li class="detail-list-item">
+                  <label for="school">학교</label>
+                  <input id="school" type="checkbox">
+                </li>
+                <li class="detail-list-item">
+                  <label for="academy">협회·단체</label>
+                  <input id="academy" type="checkbox">
+                </li>
+                <li class="detail-list-item">
+                  <label for="public">공공기관</label>
+                  <input id="public" type="checkbox">
+                </li>
+                <li class="detail-list-item">
+                  <label for="company">일반기업</label>
+                  <input id="company" type="checkbox">
+                </li>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>고객 유형</dt>
+            <dd>
+              <ul>
+                <li class="detail-list-item">
+                  <label for="first-c">최초 고객</label>
+                  <input id="first-c" type="checkbox">
+                </li>
+                <li class="detail-list-item">
+                  <label for="potential-c">잠재 고객</label>
+                  <input id="potential-c" type="checkbox">
+                </li>
+                <li class="detail-list-item">
+                  <label for="main-c">핵심 고객</label>
+                  <input id="main-c" type="checkbox">
+                </li>
+                <li class="detail-list-item">
+                  <label for="bluechip-c">우량 고객</label>
+                  <input id="bluechip-c" type="checkbox">
+                </li>
+                <li class="detail-list-item">
+                  <label for="leave-c">이탈 고객</label>
+                  <input id="leave-c" type="checkbox">
+                </li>
+                <li class="detail-list-item">
+                  <label for="dormant-c">휴면 고객</label>
+                  <input id="dormant-c" type="checkbox">
+                </li>
+                <li class="detail-list-item">
+                  <label for="refusal-c">거절 고객</label>
+                  <input id="refusal-c" type="checkbox">
+                </li>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>고객 등급</dt>
+            <dd>
+              <ul>
+                <li class="detail-list-item">
+                  <label for="platinum">Platinum</label>
+                  <input id="platinum" type="checkbox">
+                </li>
+                <li class="detail-list-item">
+                  <label for="gold">Gold</label>
+                  <input id="gold" type="checkbox">
+                </li>
+                <li class="detail-list-item">
+                  <label for="silver">Silver</label>
+                  <input id="silver" type="checkbox">
+                </li>
+                <li class="detail-list-item">
+                  <label for="bronze">Bronze</label>
+                  <input id="bronze" type="checkbox">
+                </li>
+                <li class="detail-list-item">
+                  <label for="basic">Basic</label>
+                  <input id="school" type="checkbox">
+                </li>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>지역 구분</dt>
+            <dd>
+              <ul>
+                <li class="detail-list-item">
+                  <label for="school">강원</label>
+                  <input id="school" type="checkbox">
+                </li>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>영업 일지(건)</dt>
+            <dd>
+              <ul>
+                <li class="detail-list-item">
+                  <label for="school">내림 차순(大)</label>
+                  <input id="school" type="checkbox">
+                </li>
+                <li class="detail-list-item">
+                  <label for="school">오름 차순(小)</label>
+                  <input id="school" type="checkbox">
+                </li>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>영업 상품(건)</dt>
+            <dd>
+              <ul>
+                <li class="detail-list-item">
+                  <label for="school">내림 차순(大)</label>
+                  <input id="school" type="checkbox">
+                </li>
+                <li class="detail-list-item">
+                  <label for="school">오름 차순(小)</label>
+                  <input id="school" type="checkbox">
+                </li>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>매출액</dt>
+            <dd>
+              <ul>
+                <li class="detail-list-item">
+                  <label for="school">내림 차순(大)</label>
+                  <input id="school" type="checkbox">
+                </li>
+                <li class="detail-list-item">
+                  <label for="school">오름 차순(小)</label>
+                  <input id="school" type="checkbox">
+                </li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+
+        <div class="total-result">
+          <dl class="result-list">
+            <dt class="hidden">옵션 선택결과</dt>
+            <dd>
+              <ul>
+                <li>학교<span class="icon-img"></span></li>
+              </ul>
+            </dd>
+          </dl>
+          <div>
+            <button type="reset" class="reset-btn">초기화<span></span></button>
+            <button type="button"><span>선택 된 상품 조건</span></button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+      <!-- 본문 영역 end -->
+    </section>
+    
+    <a href="#" class="topMove"><span>TOP</span></a>
+  </main>
+
+  <footer id="footerArea">
+    <address class="address">기술지원 도움이 필요하시면 <a href="mailto:airsung@coachjob.net">airsung@coachjob.net</a>으로 문의주시기 바랍니다. <br>
+    <span class="copyright">Copyright © WEDAS Company All Right Reserved.</span>
+    </address>
+  </footer>
+</body>
+</html>
