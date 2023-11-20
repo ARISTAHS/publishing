@@ -69,17 +69,32 @@ main{height: 100%; background-color: #ccc;   grid-area: ma; position: relative;}
 .dash-board p{display: inline-block;}
 .dash-board p:nth-of-type(2){text-align: right; padding-right: 40px;}
 
-section{width: 100%; height: 100%;}
+section{width: 100%;}
 .guide{display: grid; grid-template-rows: 1fr; grid-row-gap: 15px; margin: 15px 15px 0px 10px; padding: 10px; border: 1px solid red;}
 .guide li span{display: inline-block; padding-left: 10px;}
 
       /* 본문 중 바뀌는 영역 */
+.detail-area{margin: 20px 10px;}
+.detail-option{display: grid; grid-template-columns: repeat(7,1fr);  border: 1px solid black;}
+.detail-option dl{border-right: 1px solid black;}
+.detail-option dl:last-child{border-right: none;}
+.detail-option dl .option-top{border-bottom: 1px solid black; font-size: 18px; font-weight: 500px; text-align: center; }
 
 
+table{border-collapse: collapse; width: 100%;}
+th{width: calc(100%/16); height: 45px; border: 1px solid black;}
+tbody{text-align: center;}
+tbody td{border: 1px solid black;}
+tbody td img{width: 30px;}
 
+.list-down{display: block; width: 220px; height: 45px; padding: 10px 20px; border: 1px solid aqua; background-color: aqua; color: #fff; text-align: center; margin: 20px 0 0 20px;}
+.list-down span{margin-left: 10px;}
+.total-page{margin-bottom: 50px;}
+.total-page ul{display: flex; align-items: center; justify-content: center; gap: 15px;}
+.total-page ul .page-list{padding: 5px 10px; border: 1px solid black;}
+ 
 
-
-      /* 본문 중 바뀌는 영역 end */
+    /* 본문 중 바뀌는 영역 end */
 .topMove{width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; position: fixed; right: 25px; bottom: 100px; border-radius: 50%; border: 1px solid red; cursor: pointer; z-index: 10;}
 /* 본문 main 영역 end*/
 
