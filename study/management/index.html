@@ -9,17 +9,17 @@
 </head>
 <body>
   <header>
-    <h1><a href="#"></a></h1>
-    <div class="total-search">    <!-- select 항목 태그 옵션 설정해야함 -->
+    <h1><a href="#"><img src="./images/logo.png" alt="좋은일컴퍼니logo"></a></h1>
+    <div class="total-search">  <!-- select 항목 태그 옵션 설정해야함 -->
       <select name="부서 선택" required id="">
         <option selected>부서 선택</option>
-        <option value="1">HRD사업본부</option>
-        <option value="2">기획서비스본부</option>
+        <option value="">HRD사업본부</option>
+        <option value="">기획서비스본부</option>
       </select>
       <select name="담당자 선택" required id="">
         <option selected>담당자 선택</option>
-        <option value="1"><span>백승아 팀장</span></option>
-        <option value="2"><span>서지수 사원</span></option>
+        <option value=""><span>백승아 팀장</span></option>
+        <option value=""><span>서지수 사원</span></option>
       </select>
       <div class="search-area">
         <form action="#" method="post">
@@ -27,78 +27,93 @@
           <input type="search" id="search-input" placeholder="고객명 검색">
           <button type="button">
             <span class="hidden">검색</span>
-          </button>  <!--돋보기 아이콘 들어갈 계획-->
+          </button> 
         </form>
       </div>
     </div>
     <ul class="etc-area">
       <li>통합 관리자</li>
       <li>
-        <a href="#"><i class="fa-solid fa-gear"></i> </a>
-      </li> <!--setting 아이콘 들어갈 계획-->
-      <li>
-        <a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-      </li> <!--logout 아이콘 들어갈 계획-->
+        <a href="#"><img src="images/logout2.png" alt="로그아웃아이콘"></a>
+      </li> 
     </ul>
   </header>
 
-  <nav class="sideNav"> <!--class를 id로 교체 후 class 별도 설정-->
-    <a class="menu" href="#"><span>side menu</span></a> 
-    <a class="menuClose" href="#"><span>side menu close</span></a>
+  <nav class="sideNav">
+    <a class="menu" href="#"><img src="images/menu2.png" alt="햄버거메뉴아이콘"></a> 
    
-    <ul class="sideNav-area">
-      <li>
-        <dl>
-          <dt class="list-title">관리자 설정</dt>
-          <dd>
-            <ul>
-              <li class="menu-list"><a href="#">부서 관리</a></li>
-              <li class="menu-list"><a href="#">영업 담당자 관리</a></li>
-              <li class="menu-list"><a href="#">영업상품 관리</a></li>
-              <li class="menu-list"><a href="#">고객등급 관리</a></li>
-              <li class="menu-list"><a href="#">공지사항 관리</a></li>
-            </ul>
-          </dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt class="list-title">고객 관리</dt>
-          <dd>
-            <ul>
-              <li class="menu-list"><a href="#">고객 등록</a></li>
-              <li class="menu-list"><a href="#">고객 리스트</a></li>
-              <li class="menu-list"><a href="#">상담일정 캘린더</a></li>
-            </ul>
-          </dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt class="list-title">영업 관리</dt>
-          <dd>
-            <ul>
-              <li class="menu-list"><a href="#">영업일지 현황</a></li>
-              <li class="menu-list"><a href="#">영업상품 현황</a></li>
-              <li class="menu-list"><a href="#">영업진행 현황</a></li>
-            </ul>
-          </dd>
-        </dl>
-      </li>
-      <li>
-        <dl>
-          <dt class="list-title">통계관리</dt>
-          <dd>
-            <ul>
-              <li class="menu-list"><a href="#">통계 1</a></li>
-              <li class="menu-list"><a href="#">통계 2</a></li>
-            </ul>
-          </dd>
-        </dl>
-      </li>
-    </ul>
+    <div>
+      <ul class="sideNav-icon">
+        <li class="icon-list">
+          <a class="nav-link" href="#"><img src="images/home.60.png" alt="전체홈화면아이콘"></a>
+        </li>
+        <li class="icon-list">
+          <a class="nav-link" href="#"><img src="images/setting.60.png" alt="관리자설정아이콘"></a>
+        </li>
+        <li class="icon-list">
+          <a class="nav-link" href="#"><img src="images/nav-btn.60.png" alt="고객관리아이콘"></a>
+        </li>
+        <li class="icon-list">
+          <a class="nav-link" href="#"><img src="images/nav-btn2.60.png" alt="영업관리아이콘"></a>
+        </li>
+        <li class="icon-list">
+          <a class="nav-link" href="#"><img src="images/graph.60.png" alt="통계관리아이콘"></a>
+        </li>
+      </ul>
+    
+      <ul class="sideNav-area">
+        <li>
+          <dl>
+            <dt class="list-title">관리자 설정</dt>
+            <dd>
+              <ul>
+                <li class="menu-list"><a href="#">부서 관리</a></li>
+                <li class="menu-list"><a href="#">영업 담당자 관리</a></li>
+                <li class="menu-list"><a href="#">영업상품 관리</a></li>
+                <li class="menu-list"><a href="#">고객등급 관리</a></li>
+                <li class="menu-list"><a href="#">공지사항 관리</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt class="list-title">고객 관리</dt>
+            <dd>
+              <ul>
+                <li class="menu-list"><a href="#">고객 등록</a></li>
+                <li class="menu-list"><a href="#">고객 리스트</a></li>
+                <li class="menu-list"><a href="#">상담일정 캘린더</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt class="list-title">영업 관리</dt>
+            <dd>
+              <ul>
+                <li class="menu-list"><a href="#">영업일지 현황</a></li>
+                <li class="menu-list"><a href="#">영업상품 현황</a></li>
+                <li class="menu-list"><a href="#">영업진행 현황</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt class="list-title">통계관리</dt>
+            <dd>
+              <ul>
+                <li class="menu-list"><a href="#">통계 1</a></li>
+                <li class="menu-list"><a href="#">통계 2</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
   </nav>
-
   <main>
     <div class="dash-board">
        <p>대쉬보드 페이지 위치 정보 노출 단입니다.</p>
@@ -194,10 +209,10 @@
       </div>
     </section>
     
-    <a href="#" class="topMove"><span>TOP</span></a>
   </main>
 
   <footer id="footerArea">
+    <a href="#" class="topMove"><img src="images/scrollup.png" alt="상단이동아이콘"></a>
     <address class="address">기술지원 도움이 필요하시면 <a href="mailto:airsung@coachjob.net">airsung@coachjob.net</a>으로 문의주시기 바랍니다. <br>
     <span class="copyright">Copyright © WEDAS Company All Right Reserved.</span>
     </address>
