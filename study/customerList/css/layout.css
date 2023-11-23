@@ -72,17 +72,53 @@ main{height: 100%; background-color: #fff;   grid-area: ma; position: relative; 
 .dash-board p:nth-of-type(2) span:nth-of-type(2){color: #12b4f0;}
 
 section{margin: 0 30px;}
-.guide{display: grid; grid-template-rows: 1fr; grid-row-gap: 15px; margin: 15px 15px 0px 10px; padding: 10px; box-shadow: 0 1px 5px 0 rgba(107, 119, 17, .3); background: #ededed;}
-.guide li span{display: inline-block; padding-left: 10px;}
+.guide{margin-top: 15px; padding: 10px; box-shadow: 0 1px 5px 0 rgba(107, 119, 17, .3); background: #ededed;}
+.guide li span{display: inline-block; padding-left: 10px; line-height: 2; color: #666; font-size: 13px;}
 
       /* 본문 중 바뀌는 영역 */
-.detail-area{margin: 20px 10px;}
-.detail-option{display: grid; grid-template-columns: repeat(7,1fr);  border: 1px solid black;}
-.detail-option dl{border-right: 1px solid black;}
+    /* 상단 옵션 선택 영역 */
+.detail-area{margin-top: 20px;}
+.detail-option{display: grid; grid-template-columns: repeat(7, calc(100%/7));  border: 1px solid #b9bcc4;}
+.detail-option dl{border-right: 1px solid #b9bcc4;}
 .detail-option dl:last-child{border-right: none;}
-.detail-option dl .option-top{border-bottom: 1px solid black; font-size: 18px; font-weight: 500px; text-align: center; }
+.detail-option dl .option-top{border-bottom: 1px solid #b9bcc4; font-size: 15px; text-align: center; padding: 15px 0; background: #dedede;}
+.detail-option dl dd{line-height: 1.5; height: 190px;}
+.detail-option dl dd ul{overflow: auto; overflow-x: hidden; height: 100%;}
+.detail-option dl dd ul::-webkit-scrollbar{width: 7px;}
+.detail-option dl dd ul::-webkit-scrollbar-thumb{height: 10%; background: #d8dbe2; border-radius: 10px;}
+.detail-option dl dd ul::-webkit-scrollbar-track{background: #F0EBE3;}
+.detail-option .detail-list-item{width: 100%; height: 35px;}
+.detail-option .detail-list-item label{display: block; position: relative; height: 100%; cursor: pointer;}
+.detail-option .detail-list-item label span{font-size: 13px; display: block; padding: 7px 0 0 10px; color: #333;}
+.detail-option .detail-list-item input{position: absolute; opacity: 0;}
+.detail-option .detail-list-item input[type="radio"]:checked + label span{color: #435ffe;}
 
+.keyword-area{border: 1px solid #b9bcc4; padding: 15px; border-top: none;}
+.keyword-area .keyword-list{display: flex; align-items: center; justify-content: space-between;}
+.keyword-area .keyword-list .result-keyword{}
+.keyword-area .keyword-list .result-keyword ul{display: flex; gap: 15px;}
+.keyword-area .keyword-list .result-keyword li{}
+.keyword-area .keyword-list .result-keyword li button{display: inline-block; line-height: 15px; font-size: 13px; color: #435ffe; padding: 5px 10px;}
+.keyword-area .keyword-list .result-keyword li button .ico, .keyword-area .keyword-list .clear-btn .reset-btn .reset-ico{display: inline-block; width: 10px; height: 10px; position: relative;}
+.keyword-area .keyword-list .result-keyword li button .ico{background: url(../images/close2.png) no-repeat; background-size: contain;}
+.keyword-area .keyword-list .clear-btn{}
+.keyword-area .keyword-list .clear-btn .reset-btn{margin-right: 15px; color: #999;}
+.keyword-area .keyword-list .clear-btn .reset-btn .reset-ico{background: url(../images/reset2.png) no-repeat; background-size: contain; margin-left: 2px;}
+.keyword-area .keyword-list .clear-btn .keyword-result{
+  width: 140px; height: 50px; background: #999; border: 1px solid #999;
+  color: #fff; font-size: 16px; text-align: center; transition: all .5s ease;}
+.keyword-area .keyword-list .clear-btn .keyword-result:hover{background: #445760; border: 1px solid #445760;}
+    /* 상단 옵션 선택 영역 end */
 
+    /* 고객 정보일 검색 영역 */
+.search-result{}
+.search-result .search-result-top{}
+.search-result .search-result-top li:first-child{}
+.search-result .search-result-top li:first-child{}
+.search-result .search-result-top li:last-child{}
+
+    /* 고객 정보일 검색 영역 end */
+    /* 테이블 영역 */
 table{border-collapse: collapse; width: 100%;}
 th{width: calc(100%/16); height: 45px; border: 1px solid black; font-weight: 400;}
 tbody{text-align: center;}
@@ -95,7 +131,8 @@ tbody td img{width: 30px;}
 .total-page{margin-bottom: 50px;}
 .total-page ul{display: flex; align-items: center; justify-content: center; gap: 15px;}
 .total-page ul .page-list{padding: 5px 10px; border: 1px solid black;}
- 
+
+    /* 테이블 영역 end*/
 
     /* 본문 중 바뀌는 영역 end */
 
