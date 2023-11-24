@@ -19,7 +19,6 @@ body, input, textarea, select, button, table
   font-family: 'Noto Sans KR', sans-serif;
 }
 
-
 /* 블릿기호 초기화 */
 ul,li,ol {list-style: none;}
 
@@ -27,10 +26,10 @@ ul,li,ol {list-style: none;}
 h1,h2,h3,h4,h5,h6 {font-size:1rem; font-weight: 500; display:inline-block;}
 
 button{border: 0; background: none; cursor: pointer;}
+input:focus,select:focus{outline: none;}
 
 img, video{width:100%;}
-img {vertical-align: top;}
-img {border:0;} 
+img {vertical-align: top; border: 0;}
 
 .hidden { position: absolute; left: -1000%; top: 0; width: 1px; height: 1px; overflow: hidden; color: #fff;}
 
