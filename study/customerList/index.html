@@ -45,19 +45,24 @@
     <div>
       <ul class="sideNav-icon">
         <li class="icon-list">
-          <a class="nav-link" href="#"><img src="images/home.60.png" alt="전체홈화면아이콘"></a>
+          <button type="button"><span class="icon home"></span></button>
+          <!-- <a class="nav-link" href="#"><img src="images/home.png" alt="전체홈화면아이콘"></a> -->
         </li>
         <li class="icon-list">
-          <a class="nav-link" href="#"><img src="images/setting.60.png" alt="관리자설정아이콘"></a>
+          <button type="button"><span class="icon set"></span></button>
+          <!-- <a class="nav-link" href="#"><img src="images/setting.png" alt="관리자설정아이콘"></a> -->
         </li>
         <li class="icon-list">
-          <a class="nav-link" href="#"><img src="images/nav-btn.60.png" alt="고객관리아이콘"></a>
+          <button type="button"><span class="icon client"></span></button>
+          <!-- <a class="nav-link" href="#"><img src="images/client.png" alt="고객관리아이콘"></a> -->
         </li>
         <li class="icon-list">
-          <a class="nav-link" href="#"><img src="images/nav-btn2.60.png" alt="영업관리아이콘"></a>
+          <button type="button"><span class="icon calender"></span></button>
+          <!-- <a class="nav-link" href="#"><img src="images/calender.png" alt="영업관리아이콘"></a> -->
         </li>
         <li class="icon-list">
-          <a class="nav-link" href="#"><img src="images/graph.60.png" alt="통계관리아이콘"></a>
+          <button type="button"><span class="icon graph"></span></button>
+          <!-- <a class="nav-link" href="#"><img src="images/graph.png" alt="통계관리아이콘"></a> -->
         </li>
       </ul>
     
@@ -118,7 +123,7 @@
   <main>
     <div class="dash-board">
        <p>대쉬보드 페이지 위치 정보 노출 단입니다.</p>
-       <p><span>VALUE</span>&nbsp;<span>UP!</span>&nbsp;v1.0</p>
+       <!-- <p><span>VALUE</span>&nbsp;<span>UP!</span>&nbsp;v1.0</p> -->
     </div>
 
     <section>
@@ -342,7 +347,7 @@
             <span class="range-text">~</span>
             <input type="text" id="end-date" placeholder="종료 날짜" onfocus="this.placeholder=''" onblur="this.placeholder='종료 날짜'">
             <button type="button" class="search-button">검색</button>
-            <button type="button" class="reset-search-btn">초기화<span class="reset-ico"></span></button>
+            <!-- <button type="button" class="reset-search-btn">초기화<span class="reset-ico"></span></button> -->
           </li>
           <li>
             <div>
@@ -364,26 +369,26 @@
           <table>
             <thead>
               <tr>
-                <th scope="col" rowspan="2">순번</th>
-                <th scope="col" rowspan="2"><a href="#">등록일</a></th>
-                <th scope="col" rowspan="2"><a href="#">수정일</a></th>
-                <th scope="col" colspan="2">영업일지 작성일</th>
-                <th scope="col" rowspan="2">업체명</th>
+                <th scope="col" rowspan="2" class="order">순번</th>
+                <th scope="col" rowspan="2" class="date"><a href="#">등록일</a></th>
+                <th scope="col" rowspan="2" class="date"><a href="#">수정일</a></th>
+                <th scope="col" colspan="2" class="log-date">영업일지 작성일</th>
+                <th scope="col" rowspan="2" class="company-name">업체명</th>
                 <th scope="col" rowspan="2" class="model-td">메모</th>
-                <th scope="col" colspan="3">고객</th>
+                <th scope="col" colspan="3" class="client">고객</th>
                 <th scope="col" rowspan="2" class="region-td">지역</th>
                 <th scope="col" rowspan="2" class="count">담당자</th>
                 <th scope="col" rowspan="2" class="count"><a href="#">영업<br>일지</a></th>
                 <th scope="col" rowspan="2" class="count"><a href="#">영업<br>상품</a></th>
-                <th scope="col" rowspan="2"><a href="#">매출액</a></th>
+                <th scope="col" rowspan="2" class="take"><a href="#">매출액</a></th>
                 <th scope="col" rowspan="2" class="file-td">사증</th>
               </tr>
               <tr>
-                <th><a href="#">최초</a></th>
-                <th> <a href="#">최종</a></th>
-                <th>분류</th>
-                <th>유형</th>
-                <th>등급</th>
+                <th class="log-first"><a href="#">최초</a></th>
+                <th class="log-last"><a href="#">최종</a></th>
+                <th class="client-th">분류</th>
+                <th class="client-th">유형</th>
+                <th class="client-th">등급</th>
               </tr>
             </thead>
             <tbody>
@@ -392,13 +397,13 @@
                 <td>2023-06-10</td>
                 <td>2023-07-11</td>
                 <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
                 <td>부천대학교</td>
                 <td class="model-td on">
-                  <button type="button" class="memo-btn">
+                  <button type="button" onclick="" class="memo-btn">
                     <img src="images/memo.png" alt="메모아이콘">
                   </button>
-                  <div class="memo-box">
+                  <div class="memo-box" style="display: none;">
                     <dl class="box-wrap">
                       <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
                       <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
@@ -406,17 +411,17 @@
                     </dl>
                   </div>
                 </td>
-                <td>학교</td>
+                <td>협회·단체 </td>
                 <td>핵심고객</td>
-                <td>Gold</td>
+                <td>Platinum</td>
                 <td class="region-td">인천</td>
                 <td class="count">1</td>
                 <td class="count">2</td>
                 <td class="count">2</td>
-                <td>3,000,000</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
                 <td class="file-td on"> 
                   <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
+                    <img src="images/file.png" alt="첨부파일아이콘">
                   </button>
                 </td>
               </tr> 
@@ -426,10 +431,10 @@
                 <td>2023-06-10</td>
                 <td>2023-07-11</td>
                 <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
-                <td>부천대학교</td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
+                <td>부천대학교부천대학교</td>
                 <td class="model-td on">
-                  <button type="button" class="memo-btn">
+                  <button type="button" onclick="" class="memo-btn">
                     <img src="images/memo.png" alt="메모아이콘">
                   </button>
                   <div class="memo-box" style="display: none;">
@@ -440,589 +445,592 @@
                     </dl>
                   </div>
                 </td>
-                <td>학교</td>
+                <td>협회·단체 </td>
                 <td>핵심고객</td>
-                <td>Gold</td>
+                <td>Platinum</td>
                 <td class="region-td">인천</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3,000,000</td>
+                <td class="count">1</td>
+                <td class="count">2</td>
+                <td class="count">2</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
                 <td class="file-td on"> 
                   <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
+                    <img src="images/file.png" alt="첨부파일아이콘">
+                  </button>
+                </td>
+              </tr> 
+              <tr> <!--첫번째 검색 줄-->
+                <td>1</td>
+                <td>2023-06-10</td>
+                <td>2023-07-11</td>
+                <td>2023-06-10</td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
+                <td>부천대학교부천대학교</td>
+                <td class="model-td on">
+                  <button type="button" onclick="" class="memo-btn">
+                    <img src="images/memo.png" alt="메모아이콘">
+                  </button>
+                  <div class="memo-box" style="display: none;">
+                    <dl class="box-wrap">
+                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
+                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
+                      <button type="button" class="model-close"><span>닫기</span></button>
+                    </dl>
+                  </div>
+                </td>
+                <td>협회·단체 </td>
+                <td>핵심고객</td>
+                <td>Platinum</td>
+                <td class="region-td">인천</td>
+                <td class="count">1</td>
+                <td class="count">2</td>
+                <td class="count">2</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
+                <td class="file-td on"> 
+                  <button type="button" class="file-down">
+                    <img src="images/file.png" alt="첨부파일아이콘">
+                  </button>
+                </td>
+              </tr> 
+              <tr> <!--첫번째 검색 줄-->
+                <td>1</td>
+                <td>2023-06-10</td>
+                <td>2023-07-11</td>
+                <td>2023-06-10</td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
+                <td>부천대학교부천대학교</td>
+                <td class="model-td on">
+                  <button type="button" onclick="" class="memo-btn">
+                    <img src="images/memo.png" alt="메모아이콘">
+                  </button>
+                  <div class="memo-box" style="display: none;">
+                    <dl class="box-wrap">
+                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
+                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
+                      <button type="button" class="model-close"><span>닫기</span></button>
+                    </dl>
+                  </div>
+                </td>
+                <td>협회·단체 </td>
+                <td>핵심고객</td>
+                <td>Platinum</td>
+                <td class="region-td">인천</td>
+                <td class="count">1</td>
+                <td class="count">2</td>
+                <td class="count">2</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
+                <td class="file-td on"> 
+                  <button type="button" class="file-down">
+                    <img src="images/file.png" alt="첨부파일아이콘">
+                  </button>
+                </td>
+              </tr> 
+              <tr> <!--첫번째 검색 줄-->
+                <td>1</td>
+                <td>2023-06-10</td>
+                <td>2023-07-11</td>
+                <td>2023-06-10</td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
+                <td>부천대학교부천대학교</td>
+                <td class="model-td on">
+                  <button type="button" onclick="" class="memo-btn">
+                    <img src="images/memo.png" alt="메모아이콘">
+                  </button>
+                  <div class="memo-box" style="display: none;">
+                    <dl class="box-wrap">
+                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
+                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
+                      <button type="button" class="model-close"><span>닫기</span></button>
+                    </dl>
+                  </div>
+                </td>
+                <td>협회·단체 </td>
+                <td>핵심고객</td>
+                <td>Platinum</td>
+                <td class="region-td">인천</td>
+                <td class="count">1</td>
+                <td class="count">2</td>
+                <td class="count">2</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
+                <td class="file-td on"> 
+                  <button type="button" class="file-down">
+                    <img src="images/file.png" alt="첨부파일아이콘">
+                  </button>
+                </td>
+              </tr> 
+              <tr> <!--첫번째 검색 줄-->
+                <td>1</td>
+                <td>2023-06-10</td>
+                <td>2023-07-11</td>
+                <td>2023-06-10</td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
+                <td>부천대학교부천대학교</td>
+                <td class="model-td on">
+                  <button type="button" onclick="" class="memo-btn">
+                    <img src="images/memo.png" alt="메모아이콘">
+                  </button>
+                  <div class="memo-box" style="display: none;">
+                    <dl class="box-wrap">
+                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
+                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
+                      <button type="button" class="model-close"><span>닫기</span></button>
+                    </dl>
+                  </div>
+                </td>
+                <td>협회·단체 </td>
+                <td>핵심고객</td>
+                <td>Platinum</td>
+                <td class="region-td">인천</td>
+                <td class="count">1</td>
+                <td class="count">2</td>
+                <td class="count">2</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
+                <td class="file-td on"> 
+                  <button type="button" class="file-down">
+                    <img src="images/file.png" alt="첨부파일아이콘">
+                  </button>
+                </td>
+              </tr> 
+              <tr> <!--첫번째 검색 줄-->
+                <td>1</td>
+                <td>2023-06-10</td>
+                <td>2023-07-11</td>
+                <td>2023-06-10</td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
+                <td>부천대학교부천대학교</td>
+                <td class="model-td on">
+                  <button type="button" onclick="" class="memo-btn">
+                    <img src="images/memo.png" alt="메모아이콘">
+                  </button>
+                  <div class="memo-box" style="display: none;">
+                    <dl class="box-wrap">
+                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
+                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
+                      <button type="button" class="model-close"><span>닫기</span></button>
+                    </dl>
+                  </div>
+                </td>
+                <td>협회·단체 </td>
+                <td>핵심고객</td>
+                <td>Platinum</td>
+                <td class="region-td">인천</td>
+                <td class="count">1</td>
+                <td class="count">2</td>
+                <td class="count">2</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
+                <td class="file-td on"> 
+                  <button type="button" class="file-down">
+                    <img src="images/file.png" alt="첨부파일아이콘">
+                  </button>
+                </td>
+              </tr> 
+              <tr> <!--첫번째 검색 줄-->
+                <td>1</td>
+                <td>2023-06-10</td>
+                <td>2023-07-11</td>
+                <td>2023-06-10</td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
+                <td>부천대학교부천대학교</td>
+                <td class="model-td on">
+                  <button type="button" onclick="" class="memo-btn">
+                    <img src="images/memo.png" alt="메모아이콘">
+                  </button>
+                  <div class="memo-box" style="display: none;">
+                    <dl class="box-wrap">
+                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
+                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
+                      <button type="button" class="model-close"><span>닫기</span></button>
+                    </dl>
+                  </div>
+                </td>
+                <td>협회·단체 </td>
+                <td>핵심고객</td>
+                <td>Platinum</td>
+                <td class="region-td">인천</td>
+                <td class="count">1</td>
+                <td class="count">2</td>
+                <td class="count">2</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
+                <td class="file-td on"> 
+                  <button type="button" class="file-down">
+                    <img src="images/file.png" alt="첨부파일아이콘">
+                  </button>
+                </td>
+              </tr> 
+              <tr> <!--첫번째 검색 줄-->
+                <td>1</td>
+                <td>2023-06-10</td>
+                <td>2023-07-11</td>
+                <td>2023-06-10</td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
+                <td>부천대학교부천대학교</td>
+                <td class="model-td on">
+                  <button type="button" onclick="" class="memo-btn">
+                    <img src="images/memo.png" alt="메모아이콘">
+                  </button>
+                  <div class="memo-box" style="display: none;">
+                    <dl class="box-wrap">
+                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
+                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
+                      <button type="button" class="model-close"><span>닫기</span></button>
+                    </dl>
+                  </div>
+                </td>
+                <td>협회·단체 </td>
+                <td>핵심고객</td>
+                <td>Platinum</td>
+                <td class="region-td">인천</td>
+                <td class="count">1</td>
+                <td class="count">2</td>
+                <td class="count">2</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
+                <td class="file-td on"> 
+                  <button type="button" class="file-down">
+                    <img src="images/file.png" alt="첨부파일아이콘">
+                  </button>
+                </td>
+              </tr> 
+              <tr> <!--첫번째 검색 줄-->
+                <td>1</td>
+                <td>2023-06-10</td>
+                <td>2023-07-11</td>
+                <td>2023-06-10</td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
+                <td>부천대학교부천대학교</td>
+                <td class="model-td on">
+                  <button type="button" onclick="" class="memo-btn">
+                    <img src="images/memo.png" alt="메모아이콘">
+                  </button>
+                  <div class="memo-box" style="display: none;">
+                    <dl class="box-wrap">
+                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
+                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
+                      <button type="button" class="model-close"><span>닫기</span></button>
+                    </dl>
+                  </div>
+                </td>
+                <td>협회·단체 </td>
+                <td>핵심고객</td>
+                <td>Platinum</td>
+                <td class="region-td">인천</td>
+                <td class="count">1</td>
+                <td class="count">2</td>
+                <td class="count">2</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
+                <td class="file-td on"> 
+                  <button type="button" class="file-down">
+                    <img src="images/file.png" alt="첨부파일아이콘">
+                  </button>
+                </td>
+              </tr> 
+              <tr> <!--첫번째 검색 줄-->
+                <td>1</td>
+                <td>2023-06-10</td>
+                <td>2023-07-11</td>
+                <td>2023-06-10</td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
+                <td>부천대학교부천대학교</td>
+                <td class="model-td on">
+                  <button type="button" onclick="" class="memo-btn">
+                    <img src="images/memo.png" alt="메모아이콘">
+                  </button>
+                  <div class="memo-box" style="display: none;">
+                    <dl class="box-wrap">
+                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
+                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
+                      <button type="button" class="model-close"><span>닫기</span></button>
+                    </dl>
+                  </div>
+                </td>
+                <td>협회·단체 </td>
+                <td>핵심고객</td>
+                <td>Platinum</td>
+                <td class="region-td">인천</td>
+                <td class="count">1</td>
+                <td class="count">2</td>
+                <td class="count">2</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
+                <td class="file-td on"> 
+                  <button type="button" class="file-down">
+                    <img src="images/file.png" alt="첨부파일아이콘">
+                  </button>
+                </td>
+              </tr> 
+              <tr> <!--첫번째 검색 줄-->
+                <td>1</td>
+                <td>2023-06-10</td>
+                <td>2023-07-11</td>
+                <td>2023-06-10</td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
+                <td>부천대학교부천대학교</td>
+                <td class="model-td on">
+                  <button type="button" onclick="" class="memo-btn">
+                    <img src="images/memo.png" alt="메모아이콘">
+                  </button>
+                  <div class="memo-box" style="display: none;">
+                    <dl class="box-wrap">
+                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
+                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
+                      <button type="button" class="model-close"><span>닫기</span></button>
+                    </dl>
+                  </div>
+                </td>
+                <td>협회·단체 </td>
+                <td>핵심고객</td>
+                <td>Platinum</td>
+                <td class="region-td">인천</td>
+                <td class="count">1</td>
+                <td class="count">2</td>
+                <td class="count">2</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
+                <td class="file-td on"> 
+                  <button type="button" class="file-down">
+                    <img src="images/file.png" alt="첨부파일아이콘">
+                  </button>
+                </td>
+              </tr> 
+              <tr> <!--첫번째 검색 줄-->
+                <td>1</td>
+                <td>2023-06-10</td>
+                <td>2023-07-11</td>
+                <td>2023-06-10</td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
+                <td>부천대학교부천대학교</td>
+                <td class="model-td on">
+                  <button type="button" onclick="" class="memo-btn">
+                    <img src="images/memo.png" alt="메모아이콘">
+                  </button>
+                  <div class="memo-box" style="display: none;">
+                    <dl class="box-wrap">
+                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
+                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
+                      <button type="button" class="model-close"><span>닫기</span></button>
+                    </dl>
+                  </div>
+                </td>
+                <td>협회·단체 </td>
+                <td>핵심고객</td>
+                <td>Platinum</td>
+                <td class="region-td">인천</td>
+                <td class="count">1</td>
+                <td class="count">2</td>
+                <td class="count">2</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
+                <td class="file-td on"> 
+                  <button type="button" class="file-down">
+                    <img src="images/file.png" alt="첨부파일아이콘">
+                  </button>
+                </td>
+              </tr> 
+              <tr> <!--첫번째 검색 줄-->
+                <td>1</td>
+                <td>2023-06-10</td>
+                <td>2023-07-11</td>
+                <td>2023-06-10</td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
+                <td>부천대학교부천대학교</td>
+                <td class="model-td on">
+                  <button type="button" onclick="" class="memo-btn">
+                    <img src="images/memo.png" alt="메모아이콘">
+                  </button>
+                  <div class="memo-box" style="display: none;">
+                    <dl class="box-wrap">
+                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
+                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
+                      <button type="button" class="model-close"><span>닫기</span></button>
+                    </dl>
+                  </div>
+                </td>
+                <td>협회·단체 </td>
+                <td>핵심고객</td>
+                <td>Platinum</td>
+                <td class="region-td">인천</td>
+                <td class="count">1</td>
+                <td class="count">2</td>
+                <td class="count">2</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
+                <td class="file-td on"> 
+                  <button type="button" class="file-down">
+                    <img src="images/file.png" alt="첨부파일아이콘">
+                  </button>
+                </td>
+              </tr> 
+              <tr> <!--첫번째 검색 줄-->
+                <td>1</td>
+                <td>2023-06-10</td>
+                <td>2023-07-11</td>
+                <td>2023-06-10</td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
+                <td>부천대학교부천대학교</td>
+                <td class="model-td on">
+                  <button type="button" onclick="" class="memo-btn">
+                    <img src="images/memo.png" alt="메모아이콘">
+                  </button>
+                  <div class="memo-box" style="display: none;">
+                    <dl class="box-wrap">
+                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
+                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
+                      <button type="button" class="model-close"><span>닫기</span></button>
+                    </dl>
+                  </div>
+                </td>
+                <td>협회·단체 </td>
+                <td>핵심고객</td>
+                <td>Platinum</td>
+                <td class="region-td">인천</td>
+                <td class="count">1</td>
+                <td class="count">2</td>
+                <td class="count">2</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
+                <td class="file-td on"> 
+                  <button type="button" class="file-down">
+                    <img src="images/file.png" alt="첨부파일아이콘">
+                  </button>
+                </td>
+              </tr> 
+              <tr> <!--첫번째 검색 줄-->
+                <td>1</td>
+                <td>2023-06-10</td>
+                <td>2023-07-11</td>
+                <td>2023-06-10</td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
+                <td>부천대학교부천대학교</td>
+                <td class="model-td on">
+                  <button type="button" onclick="" class="memo-btn">
+                    <img src="images/memo.png" alt="메모아이콘">
+                  </button>
+                  <div class="memo-box" style="display: none;">
+                    <dl class="box-wrap">
+                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
+                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
+                      <button type="button" class="model-close"><span>닫기</span></button>
+                    </dl>
+                  </div>
+                </td>
+                <td>협회·단체 </td>
+                <td>핵심고객</td>
+                <td>Platinum</td>
+                <td class="region-td">인천</td>
+                <td class="count">1</td>
+                <td class="count">2</td>
+                <td class="count">2</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
+                <td class="file-td on"> 
+                  <button type="button" class="file-down">
+                    <img src="images/file.png" alt="첨부파일아이콘">
+                  </button>
+                </td>
+              </tr> 
+              <tr> <!--첫번째 검색 줄-->
+                <td>1</td>
+                <td>2023-06-10</td>
+                <td>2023-07-11</td>
+                <td>2023-06-10</td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
+                <td>부천대학교부천대학교</td>
+                <td class="model-td on">
+                  <button type="button" onclick="" class="memo-btn">
+                    <img src="images/memo.png" alt="메모아이콘">
+                  </button>
+                  <div class="memo-box" style="display: none;">
+                    <dl class="box-wrap">
+                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
+                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
+                      <button type="button" class="model-close"><span>닫기</span></button>
+                    </dl>
+                  </div>
+                </td>
+                <td>협회·단체 </td>
+                <td>핵심고객</td>
+                <td>Platinum</td>
+                <td class="region-td">인천</td>
+                <td class="count">1</td>
+                <td class="count">2</td>
+                <td class="count">2</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
+                <td class="file-td on"> 
+                  <button type="button" class="file-down">
+                    <img src="images/file.png" alt="첨부파일아이콘">
+                  </button>
+                </td>
+              </tr> 
+              <tr> <!--첫번째 검색 줄-->
+                <td>1</td>
+                <td>2023-06-10</td>
+                <td>2023-07-11</td>
+                <td>2023-06-10</td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
+                <td>부천대학교부천대학교</td>
+                <td class="model-td on">
+                  <button type="button" onclick="" class="memo-btn">
+                    <img src="images/memo.png" alt="메모아이콘">
+                  </button>
+                  <div class="memo-box" style="display: none;">
+                    <dl class="box-wrap">
+                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
+                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
+                      <button type="button" class="model-close"><span>닫기</span></button>
+                    </dl>
+                  </div>
+                </td>
+                <td>협회·단체 </td>
+                <td>핵심고객</td>
+                <td>Platinum</td>
+                <td class="region-td">인천</td>
+                <td class="count">1</td>
+                <td class="count">2</td>
+                <td class="count">2</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
+                <td class="file-td on"> 
+                  <button type="button" class="file-down">
+                    <img src="images/file.png" alt="첨부파일아이콘">
+                  </button>
+                </td>
+              </tr> 
+              <tr> <!--첫번째 검색 줄-->
+                <td>1</td>
+                <td>2023-06-10</td>
+                <td>2023-07-11</td>
+                <td>2023-06-10</td>
+                <td>2023-06-10<br><span class="date-color">(+15)</span></td>
+                <td>부천대학교부천대학교</td>
+                <td class="model-td on">
+                  <button type="button" onclick="" class="memo-btn">
+                    <img src="images/memo.png" alt="메모아이콘">
+                  </button>
+                  <div class="memo-box" style="display: none;">
+                    <dl class="box-wrap">
+                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
+                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
+                      <button type="button" class="model-close"><span>닫기</span></button>
+                    </dl>
+                  </div>
+                </td>
+                <td>협회·단체 </td>
+                <td>핵심고객</td>
+                <td>Platinum</td>
+                <td class="region-td">인천</td>
+                <td class="count">1</td>
+                <td class="count">2</td>
+                <td class="count">2</td>
+                <td class="sales"><span>3,000,0000000000</span></td>
+                <td class="file-td on"> 
+                  <button type="button" class="file-down">
+                    <img src="images/file.png" alt="첨부파일아이콘">
                   </button>
                 </td>
               </tr> 
               
-              <tr> <!--첫번째 검색 줄-->
-                <td>1</td>
-                <td>2023-06-10</td>
-                <td>2023-07-11</td>
-                <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
-                <td>부천대학교</td>
-                <td class="model-td on">
-                  <button type="button" class="memo-btn">
-                    <img src="images/memo.png" alt="메모아이콘">
-                  </button>
-                  <div class="memo-box" style="display: none;">
-                    <dl class="box-wrap">
-                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
-                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
-                      <button type="button" class="model-close"><span>닫기</span></button>
-                    </dl>
-                  </div>
-                </td>
-                <td>학교</td>
-                <td>핵심고객</td>
-                <td>Gold</td>
-                <td class="region-td">인천</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3,000,000</td>
-                <td class="file-td on"> 
-                  <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
-                  </button>
-                </td>
-              </tr> 
-              <tr> <!--첫번째 검색 줄-->
-                <td>1</td>
-                <td>2023-06-10</td>
-                <td>2023-07-11</td>
-                <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
-                <td>부천대학교</td>
-                <td class="model-td on">
-                  <button type="button" class="memo-btn">
-                    <img src="images/memo.png" alt="메모아이콘">
-                  </button>
-                  <div class="memo-box" style="display: none;">
-                    <dl class="box-wrap">
-                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
-                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
-                      <button type="button" class="model-close"><span>닫기</span></button>
-                    </dl>
-                  </div>
-                </td>
-                <td>학교</td>
-                <td>핵심고객</td>
-                <td>Gold</td>
-                <td class="region-td">인천</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3,000,000</td>
-                <td class="file-td on"> 
-                  <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
-                  </button>
-                </td>
-              </tr> 
-              <tr> <!--첫번째 검색 줄-->
-                <td>1</td>
-                <td>2023-06-10</td>
-                <td>2023-07-11</td>
-                <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
-                <td>부천대학교</td>
-                <td class="model-td on">
-                  <button type="button" class="memo-btn">
-                    <img src="images/memo.png" alt="메모아이콘">
-                  </button>
-                  <div class="memo-box" style="display: none;">
-                    <dl class="box-wrap">
-                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
-                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
-                      <button type="button" class="model-close"><span>닫기</span></button>
-                    </dl>
-                  </div>
-                </td>
-                <td>학교</td>
-                <td>핵심고객</td>
-                <td>Gold</td>
-                <td class="region-td">인천</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3,000,000</td>
-                <td class="file-td on"> 
-                  <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
-                  </button>
-                </td>
-              </tr> 
-              <tr> <!--첫번째 검색 줄-->
-                <td>1</td>
-                <td>2023-06-10</td>
-                <td>2023-07-11</td>
-                <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
-                <td>부천대학교</td>
-                <td class="model-td on">
-                  <button type="button" class="memo-btn">
-                    <img src="images/memo.png" alt="메모아이콘">
-                  </button>
-                  <div class="memo-box" style="display: none;">
-                    <dl class="box-wrap">
-                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
-                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
-                      <button type="button" class="model-close"><span>닫기</span></button>
-                    </dl>
-                  </div>
-                </td>
-                <td>학교</td>
-                <td>핵심고객</td>
-                <td>Gold</td>
-                <td class="region-td">인천</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3,000,000</td>
-                <td class="file-td on"> 
-                  <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
-                  </button>
-                </td>
-              </tr> 
-              <tr> <!--첫번째 검색 줄-->
-                <td>1</td>
-                <td>2023-06-10</td>
-                <td>2023-07-11</td>
-                <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
-                <td>부천대학교</td>
-                <td class="model-td on">
-                  <button type="button" class="memo-btn">
-                    <img src="images/memo.png" alt="메모아이콘">
-                  </button>
-                  <div class="memo-box" style="display: none;">
-                    <dl class="box-wrap">
-                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
-                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
-                      <button type="button" class="model-close"><span>닫기</span></button>
-                    </dl>
-                  </div>
-                </td>
-                <td>학교</td>
-                <td>핵심고객</td>
-                <td>Gold</td>
-                <td class="region-td">인천</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3,000,000</td>
-                <td class="file-td on"> 
-                  <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
-                  </button>
-                </td>
-              </tr> 
-              <tr> <!--첫번째 검색 줄-->
-                <td>1</td>
-                <td>2023-06-10</td>
-                <td>2023-07-11</td>
-                <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
-                <td>부천대학교</td>
-                <td class="model-td on">
-                  <button type="button" class="memo-btn">
-                    <img src="images/memo.png" alt="메모아이콘">
-                  </button>
-                  <div class="memo-box" style="display: none;">
-                    <dl class="box-wrap">
-                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
-                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
-                      <button type="button" class="model-close"><span>닫기</span></button>
-                    </dl>
-                  </div>
-                </td>
-                <td>학교</td>
-                <td>핵심고객</td>
-                <td>Gold</td>
-                <td class="region-td">인천</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3,000,000</td>
-                <td class="file-td on"> 
-                  <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
-                  </button>
-                </td>
-              </tr> 
-              <tr> <!--첫번째 검색 줄-->
-                <td>1</td>
-                <td>2023-06-10</td>
-                <td>2023-07-11</td>
-                <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
-                <td>부천대학교</td>
-                <td class="model-td on">
-                  <button type="button" class="memo-btn">
-                    <img src="images/memo.png" alt="메모아이콘">
-                  </button>
-                  <div class="memo-box" style="display: none;">
-                    <dl class="box-wrap">
-                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
-                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
-                      <button type="button" class="model-close"><span>닫기</span></button>
-                    </dl>
-                  </div>
-                </td>
-                <td>학교</td>
-                <td>핵심고객</td>
-                <td>Gold</td>
-                <td class="region-td">인천</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3,000,000</td>
-                <td class="file-td on"> 
-                  <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
-                  </button>
-                </td>
-              </tr> 
-              <tr> <!--첫번째 검색 줄-->
-                <td>1</td>
-                <td>2023-06-10</td>
-                <td>2023-07-11</td>
-                <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
-                <td>부천대학교</td>
-                <td class="model-td on">
-                  <button type="button" class="memo-btn">
-                    <img src="images/memo.png" alt="메모아이콘">
-                  </button>
-                  <div class="memo-box" style="display: none;">
-                    <dl class="box-wrap">
-                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
-                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
-                      <button type="button" class="model-close"><span>닫기</span></button>
-                    </dl>
-                  </div>
-                </td>
-                <td>학교</td>
-                <td>핵심고객</td>
-                <td>Gold</td>
-                <td class="region-td">인천</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3,000,000</td>
-                <td class="file-td on"> 
-                  <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
-                  </button>
-                </td>
-              </tr> 
-              <tr> <!--첫번째 검색 줄-->
-                <td>1</td>
-                <td>2023-06-10</td>
-                <td>2023-07-11</td>
-                <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
-                <td>부천대학교</td>
-                <td class="model-td on">
-                  <button type="button" class="memo-btn">
-                    <img src="images/memo.png" alt="메모아이콘">
-                  </button>
-                  <div class="memo-box" style="display: none;">
-                    <dl class="box-wrap">
-                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
-                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
-                      <button type="button" class="model-close"><span>닫기</span></button>
-                    </dl>
-                  </div>
-                </td>
-                <td>학교</td>
-                <td>핵심고객</td>
-                <td>Gold</td>
-                <td class="region-td">인천</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3,000,000</td>
-                <td class="file-td on"> 
-                  <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
-                  </button>
-                </td>
-              </tr> 
-              <tr> <!--첫번째 검색 줄-->
-                <td>1</td>
-                <td>2023-06-10</td>
-                <td>2023-07-11</td>
-                <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
-                <td>부천대학교</td>
-                <td class="model-td on">
-                  <button type="button" class="memo-btn">
-                    <img src="images/memo.png" alt="메모아이콘">
-                  </button>
-                  <div class="memo-box" style="display: none;">
-                    <dl class="box-wrap">
-                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
-                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
-                      <button type="button" class="model-close"><span>닫기</span></button>
-                    </dl>
-                  </div>
-                </td>
-                <td>학교</td>
-                <td>핵심고객</td>
-                <td>Gold</td>
-                <td class="region-td">인천</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3,000,000</td>
-                <td class="file-td on"> 
-                  <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
-                  </button>
-                </td>
-              </tr> 
-              <tr> <!--첫번째 검색 줄-->
-                <td>1</td>
-                <td>2023-06-10</td>
-                <td>2023-07-11</td>
-                <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
-                <td>부천대학교</td>
-                <td class="model-td on">
-                  <button type="button" class="memo-btn">
-                    <img src="images/memo.png" alt="메모아이콘">
-                  </button>
-                  <div class="memo-box" style="display: none;">
-                    <dl class="box-wrap">
-                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
-                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
-                      <button type="button" class="model-close"><span>닫기</span></button>
-                    </dl>
-                  </div>
-                </td>
-                <td>학교</td>
-                <td>핵심고객</td>
-                <td>Gold</td>
-                <td class="region-td">인천</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3,000,000</td>
-                <td class="file-td on"> 
-                  <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
-                  </button>
-                </td>
-              </tr> 
-              <tr> <!--첫번째 검색 줄-->
-                <td>1</td>
-                <td>2023-06-10</td>
-                <td>2023-07-11</td>
-                <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
-                <td>부천대학교</td>
-                <td class="model-td on">
-                  <button type="button" class="memo-btn">
-                    <img src="images/memo.png" alt="메모아이콘">
-                  </button>
-                  <div class="memo-box" style="display: none;">
-                    <dl class="box-wrap">
-                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
-                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
-                      <button type="button" class="model-close"><span>닫기</span></button>
-                    </dl>
-                  </div>
-                </td>
-                <td>학교</td>
-                <td>핵심고객</td>
-                <td>Gold</td>
-                <td class="region-td">인천</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3,000,000</td>
-                <td class="file-td on"> 
-                  <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
-                  </button>
-                </td>
-              </tr> 
-              <tr> <!--첫번째 검색 줄-->
-                <td>1</td>
-                <td>2023-06-10</td>
-                <td>2023-07-11</td>
-                <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
-                <td>부천대학교</td>
-                <td class="model-td on">
-                  <button type="button" class="memo-btn">
-                    <img src="images/memo.png" alt="메모아이콘">
-                  </button>
-                  <div class="memo-box" style="display: none;">
-                    <dl class="box-wrap">
-                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
-                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
-                      <button type="button" class="model-close"><span>닫기</span></button>
-                    </dl>
-                  </div>
-                </td>
-                <td>학교</td>
-                <td>핵심고객</td>
-                <td>Gold</td>
-                <td class="region-td">인천</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3,000,000</td>
-                <td class="file-td on"> 
-                  <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
-                  </button>
-                </td>
-              </tr> 
-              <tr> <!--첫번째 검색 줄-->
-                <td>1</td>
-                <td>2023-06-10</td>
-                <td>2023-07-11</td>
-                <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
-                <td>부천대학교</td>
-                <td class="model-td on">
-                  <button type="button" class="memo-btn">
-                    <img src="images/memo.png" alt="메모아이콘">
-                  </button>
-                  <div class="memo-box" style="display: none;">
-                    <dl class="box-wrap">
-                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
-                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
-                      <button type="button" class="model-close"><span>닫기</span></button>
-                    </dl>
-                  </div>
-                </td>
-                <td>학교</td>
-                <td>핵심고객</td>
-                <td>Gold</td>
-                <td class="region-td">인천</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3,000,000</td>
-                <td class="file-td on"> 
-                  <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
-                  </button>
-                </td>
-              </tr> 
-              <tr> <!--첫번째 검색 줄-->
-                <td>1</td>
-                <td>2023-06-10</td>
-                <td>2023-07-11</td>
-                <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
-                <td>부천대학교</td>
-                <td class="model-td on">
-                  <button type="button" class="memo-btn">
-                    <img src="images/memo.png" alt="메모아이콘">
-                  </button>
-                  <div class="memo-box" style="display: none;">
-                    <dl class="box-wrap">
-                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
-                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
-                      <button type="button" class="model-close"><span>닫기</span></button>
-                    </dl>
-                  </div>
-                </td>
-                <td>학교</td>
-                <td>핵심고객</td>
-                <td>Gold</td>
-                <td class="region-td">인천</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3,000,000</td>
-                <td class="file-td on"> 
-                  <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
-                  </button>
-                </td>
-              </tr> 
-              <tr> <!--첫번째 검색 줄-->
-                <td>1</td>
-                <td>2023-06-10</td>
-                <td>2023-07-11</td>
-                <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
-                <td>부천대학교</td>
-                <td class="model-td on">
-                  <button type="button" class="memo-btn">
-                    <img src="images/memo.png" alt="메모아이콘">
-                  </button>
-                  <div class="memo-box" style="display: none;">
-                    <dl class="box-wrap">
-                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
-                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
-                      <button type="button" class="model-close"><span>닫기</span></button>
-                    </dl>
-                  </div>
-                </td>
-                <td>학교</td>
-                <td>핵심고객</td>
-                <td>Gold</td>
-                <td class="region-td">인천</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3,000,000</td>
-                <td class="file-td on"> 
-                  <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
-                  </button>
-                </td>
-              </tr> 
-              <tr> <!--첫번째 검색 줄-->
-                <td>1</td>
-                <td>2023-06-10</td>
-                <td>2023-07-11</td>
-                <td>2023-06-10</td>
-                <td>2023-06-10&nbsp;<span class="color-date red">(+15)</span></td>
-                <td>부천대학교</td>
-                <td class="model-td on">
-                  <button type="button" class="memo-btn">
-                    <img src="images/memo.png" alt="메모아이콘">
-                  </button>
-                  <div class="memo-box" style="display: none;">
-                    <dl class="box-wrap">
-                      <dt><img src="images/memo.png" alt="메모아이콘">특이사항 메모 <button type="button" class="close-btn"></button></dt>
-                      <dd>특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역특이사항 메모 영역 특이사항 메모 영역 특이사항 메모 영역</dd>
-                      <button type="button" class="model-close"><span>닫기</span></button>
-                    </dl>
-                  </div>
-                </td>
-                <td>학교</td>
-                <td>핵심고객</td>
-                <td>Gold</td>
-                <td class="region-td">인천</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-                <td>3,000,000</td>
-                <td class="file-td on"> 
-                  <button type="button" class="file-down">
-                    <img src="images/folder.png" alt="첨부파일아이콘">
-                  </button>
-                </td>
-              </tr> 
 
+            
             </tbody>
           </table>
         </div>
       </div>
-
-      <a href="#" class="list-down"><i class="fa-solid fa-download"></i><span>리스트 엑셀 다운로드</span></a>
+	
+	  <div class="bottom-btn">
+      <button type="button"><i class="fa-solid fa-download"></i><span>리스트 엑셀 다운로드</span></button>
+    </div>
 
       <div class="total-page">
         <ul>
@@ -1048,5 +1056,7 @@
     <span class="copyright">Copyright © WEDAS Company All Right Reserved.</span>
     </address>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
