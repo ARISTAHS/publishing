@@ -35,13 +35,15 @@ header .total-search{
 
 /* 좌측 gnb 영역 */
 .sideNav{ grid-area: na; background-color: #fff; position: relative; border-right: 1px solid #ccc; font-family: 'Nanum Gothic', sans-serif;}
+
 .sideNav .menu{display: block; width: 50px; height: 50px; position: absolute; top: -60px; left: 5px; font-size: 30px; text-align: center; border-radius: 50%; transition: all .5s;}
+
 .sideNav div{display: grid; grid-template-columns: 60px 1fr; height: 100%;}
 .sideNav-icon{display: flex; flex-direction: column; align-items: center; background: #f5f8fe;}
+
 .sideNav-icon .icon-list{width: 100%;}
-.sideNav-icon li.on{background: #fff;}
-/* .sideNav-icon .icon-list a{display: block; padding: 20px; text-align: center;}
-.sideNav-icon .icon-list a img{width: 16px;} */
+
+.sideNav-icon .icon-list button.on{background: #fff;}
 .sideNav-icon .icon-list button{width: 100%; height: 60px;}
 .sideNav-icon .icon-list button .icon{display: inline-block; width: 16px; height: 16px;}
 .sideNav-icon .icon-list button .home{background: url(../images/home.png) no-repeat; background-size: contain;}
@@ -50,11 +52,8 @@ header .total-search{
 .sideNav-icon .icon-list button .calender{background: url(../images/calender.png) no-repeat; background-size: contain;}
 .sideNav-icon .icon-list button .graph{background: url(../images/graph.png) no-repeat; background-size: contain;}
 
-
-/* .sideNav-icon .icon-list a:active img{ position: relative; top: 3px;} */
         /* 햄버거 메뉴 영역 */
 .sideNav .menu img{width: 25px; padding: 12px 0;}
-/* .sideNav .menu:hover{border: 1px solid #fff; transform: rotate(180deg);} */
        /* 햄버거 메뉴 영역 end */
 .sideNav .sideNav-area{
   padding: 20px 0px 0px 15px;
@@ -70,6 +69,12 @@ header .total-search{
 }
 .sideNav .sideNav-area .menu-list{margin-bottom: 10px; font-size: 12px;}
 .sideNav .sideNav-area .menu-list .on{color: #435ffe;;}
+.sideNav-icon .icon-list button.on{background-color: #fff;}
+.sideNav-icon .icon-list button.on .home{background: url(../images/home2.png) no-repeat; background-size: contain;}
+.sideNav-icon .icon-list button.on .set{background: url(../images/setting2.png) no-repeat; background-size: contain;}
+.sideNav-icon .icon-list button.on .client{background: url(../images/client2.png) no-repeat; background-size: contain;}
+.sideNav-icon .icon-list button.on .calender{background: url(../images/calender2.png) no-repeat; background-size: contain;}
+.sideNav-icon .icon-list button.on .graph{background: url(../images/graph2.png) no-repeat; background-size: contain;}
 /* 좌측 gnb 영역 end*/
 
 

@@ -40,34 +40,29 @@
   </header>
 
   <nav class="sideNav">
-    <a class="menu" href="#"><img src="images/menu2.png" alt="햄버거메뉴아이콘"></a> 
+    <a class="menu" href="#" onclick=""><img src="images/menu2.png" alt="햄버거메뉴아이콘"></a> 
    
     <div>
       <ul class="sideNav-icon">
         <li class="icon-list">
-          <button type="button"><span class="icon home"></span></button>
-          <!-- <a class="nav-link" href="#"><img src="images/home.png" alt="전체홈화면아이콘"></a> -->
+          <button type="button" id="totalBtn" onclick="iconClick(this)"><span class="icon home"></span></button>
         </li>
         <li class="icon-list">
-          <button type="button"><span class="icon set"></span></button>
-          <!-- <a class="nav-link" href="#"><img src="images/setting.png" alt="관리자설정아이콘"></a> -->
+          <button type="button" id="setBtn" onclick="iconClick(this)"><span class="icon set"></span></button>
         </li>
         <li class="icon-list">
-          <button type="button"><span class="icon client"></span></button>
-          <!-- <a class="nav-link" href="#"><img src="images/client.png" alt="고객관리아이콘"></a> -->
+          <button type="button" id="clientBtn" onclick="iconClick(this)"><span class="icon client"></span></button>
         </li>
         <li class="icon-list">
-          <button type="button"><span class="icon calender"></span></button>
-          <!-- <a class="nav-link" href="#"><img src="images/calender.png" alt="영업관리아이콘"></a> -->
+          <button type="button" id="calenderBtn" onclick="iconClick(this)"><span class="icon calender"></span></button>
         </li>
         <li class="icon-list">
-          <button type="button"><span class="icon graph"></span></button>
-          <!-- <a class="nav-link" href="#"><img src="images/graph.png" alt="통계관리아이콘"></a> -->
+          <button type="button" id="graphBtn" onclick="iconClick(this)"><span class="icon graph"></span></button>
         </li>
       </ul>
     
-      <ul class="sideNav-area">
-        <li>
+      <ul class="sideNav-area" id="nav-total">
+        <li class="setting">
           <dl>
             <dt class="list-title">관리자 설정</dt>
             <dd>
@@ -81,7 +76,7 @@
             </dd>
           </dl>
         </li>
-        <li>
+        <li class="client">
           <dl>
             <dt class="list-title">고객 관리</dt>
             <dd>
@@ -93,7 +88,7 @@
             </dd>
           </dl>
         </li>
-        <li>
+        <li class="calender">
           <dl>
             <dt class="list-title">영업 관리</dt>
             <dd>
@@ -105,7 +100,7 @@
             </dd>
           </dl>
         </li>
-        <li>
+        <li class="graph">
           <dl>
             <dt class="list-title">통계관리</dt>
             <dd>
