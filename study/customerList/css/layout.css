@@ -33,54 +33,41 @@ header .total-search{
 /* 헤더 영역 end*/
 
 
-/* 좌측 gnb 영역 */
+/* 좌측 nav 영역 */
 .sideNav{ grid-area: na; background-color: #fff; position: relative; border-right: 1px solid #ccc; font-family: 'Nanum Gothic', sans-serif;}
-
 .sideNav .menu{display: block; width: 50px; height: 50px; position: absolute; top: -60px; left: 5px; font-size: 30px; text-align: center; border-radius: 50%; transition: all .5s;}
-
-.sideNav div{display: grid; grid-template-columns: 60px 1fr; height: 100%;}
-.sideNav-icon{display: flex; flex-direction: column; align-items: center; background: #f5f8fe;}
-
-.sideNav-icon .icon-list{width: 100%;}
-
-.sideNav-icon .icon-list button.on{background: #fff;}
-.sideNav-icon .icon-list button{width: 100%; height: 60px;}
-.sideNav-icon .icon-list button .icon{display: inline-block; width: 16px; height: 16px;}
-.sideNav-icon .icon-list button .home{background: url(../images/home.png) no-repeat; background-size: contain;}
-.sideNav-icon .icon-list button .set{background: url(../images/setting.png) no-repeat; background-size: contain;}
-.sideNav-icon .icon-list button .client{background: url(../images/client.png) no-repeat; background-size: contain;}
-.sideNav-icon .icon-list button .calender{background: url(../images/calender.png) no-repeat; background-size: contain;}
-.sideNav-icon .icon-list button .graph{background: url(../images/graph.png) no-repeat; background-size: contain;}
-
         /* 햄버거 메뉴 영역 */
 .sideNav .menu img{width: 25px; padding: 12px 0;}
        /* 햄버거 메뉴 영역 end */
-.sideNav .sideNav-area{
-  padding: 20px 0px 0px 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 30px;
-}
-.sideNav .sideNav-area .list-title{
-  font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-.sideNav .sideNav-area .menu-list{margin-bottom: 10px; font-size: 12px;}
-.sideNav .sideNav-area .menu-list .on{color: #435ffe;;}
-.sideNav-icon .icon-list button.on{background-color: #fff;}
-.sideNav-icon .icon-list button.on .home{background: url(../images/home2.png) no-repeat; background-size: contain;}
-.sideNav-icon .icon-list button.on .set{background: url(../images/setting2.png) no-repeat; background-size: contain;}
-.sideNav-icon .icon-list button.on .client{background: url(../images/client2.png) no-repeat; background-size: contain;}
-.sideNav-icon .icon-list button.on .calender{background: url(../images/calender2.png) no-repeat; background-size: contain;}
-.sideNav-icon .icon-list button.on .graph{background: url(../images/graph2.png) no-repeat; background-size: contain;}
-/* 좌측 gnb 영역 end*/
+.nav-ul{position: relative; height: 100%; background: #ebebeb; width: 60px;}
+.nav-ul .nav-li{}
+.nav-ul .nav-li button{width: 60px; height: 60px;}
+.nav-ul .nav-li button span{display: inline-block; width: 16px; height: 16px; text-align: center;} 
+.nav-ul .nav-li .home-icon{background: url(../images/home.png) no-repeat; background-size: contain;}
+.nav-ul .nav-li .set-icon{background: url(../images/setting.png) no-repeat; background-size: contain;}
+.nav-ul .nav-li .client-icon{background: url(../images/client.png) no-repeat; background-size: contain;}
+.nav-ul .nav-li .calender-icon{background: url(../images/calender.png) no-repeat; background-size: contain;}
+.nav-ul .nav-li .graph-icon{background: url(../images/graph.png) no-repeat; background-size: contain;}
+.nav-ul li.on button{background: #fff;}
+.nav-ul li.on .home-icon{background: url(../images/home2.png) no-repeat; background-size: contain;}
+.nav-ul li.on .set-icon{background: url(../images/setting2.png) no-repeat; background-size: contain;}
+.nav-ul li.on .client-icon{background: url(../images/client2.png) no-repeat; background-size: contain;}
+.nav-ul li.on .calender-icon{background: url(../images/calender2.png) no-repeat; background-size: contain;}
+.nav-ul li.on .graph-icon{background: url(../images/graph2.png) no-repeat; background-size: contain;}
+.nav-ul .nav-li .nav-oparea{ display: none; position: absolute; top: 0; left: 60px; ;background: #fff; height: 100%; width: 190px; padding: 15px 20px; border-right: 1px solid #dbdbdb;}
+.nav-ul li.on div.on{display: block;}
+.nav-ul .nav-li .nav-oparea dl{margin-bottom: 30px;}
+.nav-ul .nav-li .nav-oparea .list-title{margin-bottom: 10px; font-weight: 700; font-size: 14px;}
+.nav-ul .nav-li .nav-oparea dl .menu-list{margin-bottom: 5px;}
+.nav-ul .nav-li .nav-oparea dl .menu-list a{color: #666; font-size: 12px; margin-bottom: 10px;}
+.nav-ul li.on div.on dl .menu-list a.on{color: #435ffe;}
+
+/* 좌측 nav 영역 end*/
 
 
 /* 본문 main 영역 */
 main{height: 100%; min-width: 1500px; background-color: #fff; grid-area: ma; position: relative; font-family: 'Nanum Gothic','Noto Sans KR', sans-serif; padding-bottom: 200px;}
-.dash-board{position: sticky; top: 0; border-bottom: 1px solid #dedede; width: 100%; height: 60px; padding-left: 40px; display: grid; grid-template-columns: auto 200px; align-items: center;background-color: #fcfcfc; z-index: 1;}
+.dash-board{position: sticky; top: 0; border-bottom: 1px solid #dedede; width: 100%; height: 60px; padding-left: 30px; display: grid; grid-template-columns: auto 200px; align-items: center;background-color: #fff; z-index: 1;}
 .dash-board p{display: inline-block; }
 .dash-board p:nth-of-type(2){text-align: right; padding-right: 40px;}
 .dash-board p:nth-of-type(2) span:nth-of-type(1){color: #ff8605;}
@@ -150,16 +137,18 @@ section{margin: 0 30px;}
 .search-result-content tbody .sales span{display: inline-block; width: 65px; white-space: pre-line; word-wrap: break-word;}
         /* 모달 메시지 창 */
 .search-result-content .model-td{position: relative;}
-.search-result-content td.on button{width: 20px; height: 20px;}
-.search-result-content .model-td .memo-box{position: absolute; top: 25px; left: 50%; z-index: 1; background: #fcfcfc; border: 4px solid #FFE9A0;}
+
+.search-result-content .model-td button, .search-result-content .file-td button{width: 20px; height: 20px;}
+
+.search-result-content .model-td .memo-box{display: none; position: absolute; top: 25px; left: 50%; z-index: 1; background: #fcfcfc; border: 4px solid #FFE9A0;}
+.search-result-content .model-td div.on{display: block;}
 .search-result-content .model-td .memo-box .box-wrap{padding: 20px 20px; width: 350px;}
 .search-result-content .model-td .memo-box .box-wrap dt{line-height: 15px; text-align: left; color: #333; font-weight: normal; font-size: 12px; position: relative;}
 .search-result-content .model-td .memo-box .box-wrap dt img{width: 15px; margin-right: 10px;}
 .search-result-content .model-td .memo-box .box-wrap dt .close-btn{
   content: ''; display: block; background: url(../images/close2.png) no-repeat; width: 15px; height: 15px; position: absolute; right: 0; top: 0; background-size: contain;}
 .search-result-content .model-td .memo-box .box-wrap dd{height: 150px; overflow: auto; overflow-x: hidden; margin-top: 10px; border: 1px solid #dedede; font-size: 12px; text-align: left; color: #333; line-height: 2; padding: 5px 10px;}
-.search-result-content .model-td .memo-box .box-wrap .model-close{width: 50px; height: 30px; background: #ccc; color: #fff; margin: 10px 0;}
-.search-result-content .model-td .memo-box .box-wrap .model-close span{display: inline-block; padding: 5px 10px;}
+.search-result-content .model-td .memo-box .close-btn{width: 50px; height: 30px; background: #ccc; color: #fff; margin-bottom: 15px;}
         /* 모달 메시지 창 end */
 
         /* 하단 다운로드 버튼 영역 */
