@@ -95,7 +95,7 @@ section{margin: 0 30px;}
 .detail-option .detail-list-item label span{font-size: 13px; display: block; padding-left: 10px; color: #333;}
 .detail-option .detail-list-item input{position: absolute; opacity: 0;}
 .detail-option .detail-list-item input[type="radio"]:checked + label span{color: #3399ff;}
-.keyword-area{border: 1px solid #b9bcc4; padding: 15px; border-top: none; position: relative;}
+.keyword-area{display: none; border: 1px solid #b9bcc4; padding: 15px; border-top: none; position: relative;}
 .keyword-area .keyword-list{display: table; width: 100%;}
 .keyword-area .keyword-list .result-keyword{width: 100%; position: relative; vertical-align: top;}
 .keyword-area .keyword-list dd{display: table-cell;}
@@ -137,10 +137,8 @@ section{margin: 0 30px;}
 .search-result-content tbody .sales span{display: inline-block; width: 65px; white-space: pre-line; word-wrap: break-word;}
         /* 모달 메시지 창 */
 .search-result-content .model-td{position: relative;}
-
 .search-result-content .model-td button, .search-result-content .file-td button{width: 20px; height: 20px;}
-
-.search-result-content .model-td .memo-box{display: none; position: absolute; top: 25px; left: 50%; z-index: 1; background: #fcfcfc; border: 4px solid #FFE9A0;}
+.search-result-content .model-td .memo-box{display: none; position: absolute; top: 30px; left: 70%; z-index: 1; background: #fcfcfc; border: 4px solid #FFE9A0;}
 .search-result-content .model-td div.on{display: block;}
 .search-result-content .model-td .memo-box .box-wrap{padding: 20px 20px; width: 350px;}
 .search-result-content .model-td .memo-box .box-wrap dt{line-height: 15px; text-align: left; color: #333; font-weight: normal; font-size: 12px; position: relative;}
@@ -157,11 +155,13 @@ section{margin: 0 30px;}
 .bottom-btn button span{margin-left: 10px;}
         /* 하단 다운로드 버튼 영역 end*/
         /* 페이지 단 영역 */
-.total-page{margin-bottom: 50px;}
-.total-page ul{display: flex; align-items: center; justify-content: center; gap: 5px; line-height: 10px;}
-.total-page ul .page-list{padding: 10px; border: 1px solid #ccc; width: 32px; height: 32px; text-align: center; font-size: 12px;}
-.total-page ul .page-list a{color: #666;}
-.total-page .page-list a img{width: 10px; height: 10px;}
+.pagination-container{margin-bottom: 50px; display: flex; align-items: center; justify-content: center; gap: 5px; line-height: 10px;}
+.pagination-container ul{display: flex; gap: 5px;}
+.pagination-container ul li{padding: 10px; width: 32px; height: 32px; text-align: center; font-size: 12px; }
+.pagination-container .page-num li a{color: #666; position: relative;}
+.pagination-container .page-num li a.on{font-weight: 700; color: #333; font-size: 14px;}
+.pagination-container .page-num li a.on::before{content: ''; display: block; position: absolute; bottom: -2px; left: 0; width: 10px; height: 1.5px; background: #666;}
+.pagination-container .page-prev li a img, .pagination-container .page-next li a img{width: 10px; height: 10px;}
         /* 페이지 단 영역 end */
         /* 테이블 해더 너비 지정 */
 .search-result-content thead th.count, .search-result-content tbody td.count{width: 2%;}

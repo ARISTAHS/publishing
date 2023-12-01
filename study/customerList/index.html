@@ -283,7 +283,7 @@
                   <label for="gangwon"><span>강원</span> </label>
                 </li>
                 <li class="detail-list-item">
-                  <input id="hungbuk" type="radio" name="group-4">
+                  <input id="chungbuk" type="radio" name="group-4">
                   <label for="chungbuk"><span>충북</span> </label>
                 </li>
                 <li class="detail-list-item">
@@ -339,14 +339,14 @@
               </ul>
             </dd>
           </dl>
-        </div>
+        </div>  
 
         <div class="keyword-area">
           <dl class="keyword-list">
             <dt class="hidden">옵션 선택결과</dt>
             <dd class="result-keyword">
               <ul>
-                <li>학교<button type="button" class="close-btn"></button></li>
+                <!-- <li>학교<button type="button" class="close-btn"></button></li>
                 <li>최초 고객<button type="button" class="close-btn"></button></li>
                 <li>Platinum<button type="button" class="close-btn"></button></li>
                 <li>영업일지 내림차순<button type="button" class="close-btn"></button></li>
@@ -366,7 +366,7 @@
                 <li>학교 <button type="button" class="close-btn"></button></li>
                 <li>학교 <button type="button" class="close-btn"></button></li>
                 <li>학교 <button type="button" class="close-btn"></button></li>
-                <li>학교 <button type="button" class="close-btn"></button></li>
+                <li>학교 <button type="button" class="close-btn"></button></li> -->
               </ul>
               <button type="reset" class="reset-btn">초기화<span class="reset-ico"></button>
             </dd>
@@ -399,6 +399,7 @@
                 <option value="5" selected>5개</option>
                 <option value="10">10개</option>
                 <option value="20">20개</option>
+                <option value="50">0개</option>
               </select>
             </div>
           </li>
@@ -692,28 +693,27 @@
                 </td>
               </tr> 
               
-
-            
             </tbody>
           </table>
         </div>
       </div>
 	
-	  <div class="bottom-btn">
-      <button type="button"><i class="fa-solid fa-download"></i><span>리스트 엑셀 다운로드</span></button>
-    </div>
+      <div class="bottom-btn">
+        <button type="button"><i class="fa-solid fa-download"></i><span>리스트 엑셀 다운로드</span></button>
+      </div>
 
-      <div class="total-page">
-        <ul>
-          <li class="page-list"><a href="#" class="prev-doble"><img src="images/left2.png" alt="이전 첫페이지로 돌아가기"></a></li>
-          <li class="page-list"><a href="#" class="prev"><img src="images/left1.png" alt="직전페이지로 돌아가기"></a></li>
-          <li class="page-list"><a href="#">1</a></li>
-          <li class="page-list"><a href="#">2</a></li>
-          <li class="page-list"><a href="#">3</a></li>
-          <li class="page-list"><a href="#">4</a></li>
-          <li class="page-list"><a href="#">5</a></li>
-          <li class="page-list"><a href="#" class="next"><img src="images/right1.png" alt="다음페이지로 넘어가기"></a></li>
-          <li class="page-list"><a href="#" class="next-duble"><img src="images/right2.png" alt="다음 끝페이지로 넘어가기"></a></li>
+      <div class="pagination-container">
+        <ul class="page-prev">
+          <li class="prev1"><a href="#" class="prev-doble"><img src="images/left2.png" alt="이전 첫페이지로 돌아가기"></a></li>
+          <li class="prev2"><a href="#" class="prev"><img src="images/left1.png" alt="직전페이지로 돌아가기"></a></li>
+        </ul>
+        <ul class="page-num">
+          <!-- <li class="page-list"><a href="#">1</a></li> -->
+          <!-- 페이지 갯수 삽입 자리 -->
+        </ul>
+        <ul class="page-next">
+          <li class="next1"><a href="#" class="next"><img src="images/right1.png" alt="다음페이지로 넘어가기"></a></li>
+          <li class="next2"><a href="#" class="next-duble"><img src="images/right2.png" alt="다음 끝페이지로 넘어가기"></a></li>
         </ul>
       </div>
       <!-- 본문 영역 end -->
