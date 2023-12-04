@@ -33,39 +33,40 @@ header .total-search{
 /* 헤더 영역 end*/
 
 
-/* 좌측 gnb 영역 */
-.sideNav{ grid-area: na; background-color: #fff; position: relative; border-right: 1px solid #ccc;}
+/* 좌측 nav 영역 */
+.sideNav{ grid-area: na; background-color: #fff; position: relative; border-right: 1px solid #ccc; font-family: 'Nanum Gothic', sans-serif;}
 .sideNav .menu{display: block; width: 50px; height: 50px; position: absolute; top: -60px; left: 5px; font-size: 30px; text-align: center; border-radius: 50%; transition: all .5s;}
-.sideNav div{display: grid; grid-template-columns: 60px 1fr; height: 100%;}
-.sideNav-icon{display: flex; flex-direction: column; align-items: center; border-right: 1px solid #666; background: #f5f8fe;}
-.sideNav-icon .icon-list{margin: 10px 0px 0px;}
-.sideNav-icon .icon-list a{display: block; padding: 15px 18px; transition: all .3s ease-in-out;}
-.sideNav-icon .icon-list a img{width: 20px;}
-.sideNav-icon .icon-list a:active img{ position: relative; top: 3px;}
         /* 햄버거 메뉴 영역 */
 .sideNav .menu img{width: 25px; padding: 12px 0;}
-.sideNav .menu:hover{border: 1px solid #fff; transform: rotate(180deg);}
        /* 햄버거 메뉴 영역 end */
-.sideNav .sideNav-area{
-  padding: 20px 0px 0px 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 30px;
-}
-.sideNav .sideNav-area .list-title{
-  font-size: 1.1em;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-.sideNav .sideNav-area .menu-list{margin-bottom: 5px; font-size: 14px;}
-.sideNav .sideNav-area .menu-list .on{color: #435ffe;;}
-/* 좌측 gnb 영역 end*/
+.nav-ul{position: relative; height: 100%; background: #ebebeb; width: 60px;}
+.nav-ul .nav-li button{width: 60px; height: 60px;}
+.nav-ul .nav-li button span{display: inline-block; width: 16px; height: 16px; text-align: center;} 
+.nav-ul .nav-li .home-icon{background: url(../images/home.png) no-repeat; background-size: contain;}
+.nav-ul .nav-li .set-icon{background: url(../images/setting.png) no-repeat; background-size: contain;}
+.nav-ul .nav-li .client-icon{background: url(../images/client.png) no-repeat; background-size: contain;}
+.nav-ul .nav-li .calender-icon{background: url(../images/calender.png) no-repeat; background-size: contain;}
+.nav-ul .nav-li .graph-icon{background: url(../images/graph.png) no-repeat; background-size: contain;}
+.nav-ul li.on button{background: #fff;}
+.nav-ul li.on .home-icon{background: url(../images/home2.png) no-repeat; background-size: contain;}
+.nav-ul li.on .set-icon{background: url(../images/setting2.png) no-repeat; background-size: contain;}
+.nav-ul li.on .client-icon{background: url(../images/client2.png) no-repeat; background-size: contain;}
+.nav-ul li.on .calender-icon{background: url(../images/calender2.png) no-repeat; background-size: contain;}
+.nav-ul li.on .graph-icon{background: url(../images/graph2.png) no-repeat; background-size: contain;}
+.nav-ul .nav-li .nav-oparea{ display: none; position: absolute; top: 0; left: 60px; ;background: #fff; height: 100%; width: 190px; padding: 15px 20px; border-right: 1px solid #dbdbdb;}
+.nav-ul li.on div.on{display: block;}
+.nav-ul .nav-li .nav-oparea dl{margin-bottom: 30px;}
+.nav-ul .nav-li .nav-oparea .list-title{margin-bottom: 10px; font-weight: 700; font-size: 14px;}
+.nav-ul .nav-li .nav-oparea dl .menu-list{margin-bottom: 5px;}
+.nav-ul .nav-li .nav-oparea dl .menu-list a{color: #666; font-size: 12px; margin-bottom: 10px;}
+.nav-ul li.on div.on dl .menu-list a.on{color: #435ffe;}
+
+/* 좌측 nav 영역 end*/
 
 
 /* 본문 main 영역 */
 main{height: 100%; min-width: 1500px; background-color: #fff; grid-area: ma; position: relative; font-family: 'Nanum Gothic','Noto Sans KR', sans-serif; padding-bottom: 200px;}
-.dash-board{position: sticky; top: 0; border-bottom: 1px solid #dedede; width: 100%; height: 60px; padding-left: 40px; display: grid; grid-template-columns: auto 200px; align-items: center;background-color: #fcfcfc; z-index: 1;}
+.dash-board{position: sticky; top: 0; border-bottom: 1px solid #dedede; width: 100%; height: 60px; padding-left: 30px; display: grid; grid-template-columns: auto 200px; align-items: center;background-color: #fff; z-index: 1;}
 .dash-board p{display: inline-block; }
 .dash-board p:nth-of-type(2){text-align: right; padding-right: 40px;}
 .dash-board p:nth-of-type(2) span:nth-of-type(1){color: #ff8605;}
@@ -73,7 +74,8 @@ main{height: 100%; min-width: 1500px; background-color: #fff; grid-area: ma; pos
 
 section{margin: 0 30px;}
 .guide{margin-top: 15px; padding: 10px; box-shadow: 0 1px 5px 0 rgba(107, 119, 17, .3); background: #ededed;}
-.guide li span{display: inline-block; padding-left: 10px; line-height: 2; color: #666; font-size: 13px;}
+.guide li span{display: inline-block; padding-left: 10px; line-height: 2; color: #666; font-size: 12px;}
+.guide li i{font-size: 12px;}
 
      /* 본문 중 바뀌는 영역 */
 .table-area{margin: 40px 20px 0 0; }
@@ -86,19 +88,20 @@ section{margin: 0 30px;}
 .table-area table tr th, .table-area table tr td{padding: 10px 30px; border-bottom: 1px solid #dedede; text-align: left;}
 
 .table-area table .client-kind td span, .table-area table .client-type td span{margin-right: 20px;} 
-.table-area table .company-name td input, .table-area table .company-number td input, .table-area table .zone td select {width: 300px; height: 40px; padding: 10px 20px;}
+.table-area table .company-name td input, .table-area table .company-number td input, .table-area table .zone td select {width: 300px; height: 40px; padding: 10px 20px; border: 1px solid #666;}
 .table-area table .company-number td{display: flex; align-items: center; gap: 10px;}
-.table-area table tr td label{width: 150px; height: 40px; padding: 7px; display: block; text-align: center; border: 1px solid #445760; background-color: #445760; color: #fff; cursor: pointer;}
+.table-area table tr td label{width: 120px; height: 40px; padding: 7px; display: block; text-align: center; border: 1px solid #445760; background-color: #445760; color: #fff; cursor: pointer; line-height: 24px;}
 
 .table-area table tr:last-child th, .table-area table tr:last-child td{border-bottom: none;}
-.table-area table tr:last-child td{display: grid; grid-template-columns: 150px 150px 500px; grid-gap: 10px 10px;}
-.table-area table tr:last-child td input{height: 40px;
-   /* text-align: center;  */  cursor: pointer;}
+.table-area table tr:last-child td{display: grid; grid-template-columns: 70px 105px 500px; grid-gap: 10px 10px;}
+.table-area table tr:last-child td input{height: 40px; border: 1px solid #666; cursor: pointer;}
 .table-area table tr:last-child td input:last-child{grid-column: 1/4;  padding-left: 20px;}
 
 .table-area .table-btn{display: flex; align-items: center; justify-content: center; gap: 50px;}
 .table-area .table-btn button{width: 200px; height: 50px; border: 1px solid #445760; background-color: #445760; color: #fff; border-radius: 5px; cursor: pointer;}
 .table-area .table-btn .reset{border: 1px solid #999; background-color: #999;}
+.residence td #address1, .residence td #address2 {padding-left: 5px;}
+.residence td #search-icon{background: url(../images/search2.png) 50% 50% no-repeat; background-size: 30px 30px; background-color: #445760;}
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button{ 
@@ -112,10 +115,10 @@ input::-webkit-input-placeholder{text-align: center;}
 
 
 /* footer 영역 */
-#footerArea{padding: 25px 0 15px; text-align: center; color: #999; font-size: 0.8em; background:#f3f3f3; line-height: 1.6;   grid-area: fo; position: relative;}
-.address{ font-family: 'Nanum Gothic', sans-serif; font-style: normal;}
+#footerArea{padding: 25px 0 15px; text-align: center; color: #999; background:#fcfcfc; line-height: 1.6; grid-area: fo; position: relative;}
+#footerArea .address{ font-family: 'Nanum Gothic', sans-serif; font-style: normal; font-size: 0.75em;}
+#footerArea .address a{color: #999;}
 .copyright{color: #999; font-size: 12px;}
-.topMove{width: 50px; height: 50px; position: fixed; right: 15px; bottom: 100px; border-radius: 50%; border: 1px solid #183153; background: #183153; cursor: pointer; z-index: 10;}
-.topMove img{width: 30px;padding-top: 8px; transition: all .5s ease-in-out;}
-.topMove:hover img{padding-top: 5px;}
+.topMove{width: 50px; height: 50px; position: fixed; right: 15px; bottom: 100px; border-radius: 50%; border: 1px solid #183153; background: #183153; cursor: pointer; z-index: 10; transition: opacity .3s ease;}
+.topMove img{width: 30px;padding-top: 8px;}
 /* footer 영역 end */

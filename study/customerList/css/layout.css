@@ -40,7 +40,6 @@ header .total-search{
 .sideNav .menu img{width: 25px; padding: 12px 0;}
        /* 햄버거 메뉴 영역 end */
 .nav-ul{position: relative; height: 100%; background: #ebebeb; width: 60px;}
-.nav-ul .nav-li{}
 .nav-ul .nav-li button{width: 60px; height: 60px;}
 .nav-ul .nav-li button span{display: inline-block; width: 16px; height: 16px; text-align: center;} 
 .nav-ul .nav-li .home-icon{background: url(../images/home.png) no-repeat; background-size: contain;}
@@ -132,7 +131,12 @@ section{margin: 0 30px;}
 .search-result-content tbody{text-align: center; color: #000;}
 .search-result-content tbody tr{height: 50px; width: 100%;}
 .search-result-content tbody td{border-right: 1px solid #dedede; border-bottom: 1px solid #dedede; padding: 5px; line-height: 25px;}
-.search-result-content tbody td span.date-color{color: red;}
+
+.search-result-content tbody td #date-dqys{display: none;}
+.search-result-content tbody td span.date-color{color: black;}
+.search-result-content tbody td span.blue-text{color: blue;}
+.search-result-content tbody td span.red-text{color: red;}
+
 .search-result-content tbody .sales{text-align: center;}
 .search-result-content tbody .sales span{display: inline-block; width: 65px; white-space: pre-line; word-wrap: break-word;}
         /* 모달 메시지 창 */

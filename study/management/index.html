@@ -6,6 +6,7 @@
   <title>고객등록</title>
   <link rel="stylesheet" href="css/layout.css">
   <script src="https://kit.fontawesome.com/ef15d6eb6f.js" crossorigin="anonymous"></script>
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </head>
 <body>
   <header>
@@ -24,7 +25,7 @@
       <div class="search-area">
         <form action="#" method="post">
           <label for="search-input"></label>
-          <input type="search" id="search-input" placeholder="고객명 검색">
+          <input type="search" id="search-input" placeholder="고객명 검색" onfocus="this.placeholder = ''" onblur="this.placeholder='고객명 검색'">
           <button type="button">
             <span class="hidden">검색</span>
           </button> 
@@ -42,27 +43,11 @@
   <nav class="sideNav">
     <a class="menu" href="#"><img src="images/menu2.png" alt="햄버거메뉴아이콘"></a> 
    
-    <div>
-      <ul class="sideNav-icon">
-        <li class="icon-list">
-          <a class="nav-link" href="#"><img src="images/home.60.png" alt="전체홈화면아이콘"></a>
-        </li>
-        <li class="icon-list">
-          <a class="nav-link" href="#"><img src="images/setting.60.png" alt="관리자설정아이콘"></a>
-        </li>
-        <li class="icon-list">
-          <a class="nav-link" href="#"><img src="images/nav-btn.60.png" alt="고객관리아이콘"></a>
-        </li>
-        <li class="icon-list">
-          <a class="nav-link" href="#"><img src="images/nav-btn2.60.png" alt="영업관리아이콘"></a>
-        </li>
-        <li class="icon-list">
-          <a class="nav-link" href="#"><img src="images/graph.60.png" alt="통계관리아이콘"></a>
-        </li>
-      </ul>
-    
-      <ul class="sideNav-area">
-        <li>
+    <ul class="nav-ul">
+      <li class="nav-li">
+        <button type="button"><span class="home-icon"></span>
+        </button>
+        <div class="nav-oparea">
           <dl>
             <dt class="list-title">관리자 설정</dt>
             <dd>
@@ -75,8 +60,6 @@
               </ul>
             </dd>
           </dl>
-        </li>
-        <li>
           <dl>
             <dt class="list-title">고객 관리</dt>
             <dd>
@@ -87,8 +70,6 @@
               </ul>
             </dd>
           </dl>
-        </li>
-        <li>
           <dl>
             <dt class="list-title">영업 관리</dt>
             <dd>
@@ -99,8 +80,6 @@
               </ul>
             </dd>
           </dl>
-        </li>
-        <li>
           <dl>
             <dt class="list-title">통계관리</dt>
             <dd>
@@ -110,14 +89,81 @@
               </ul>
             </dd>
           </dl>
-        </li>
-      </ul>
-    </div>
+        </div>
+      </li>
+      <li class="nav-li">
+        <button type="button"><span class="set-icon"></span>
+        </button>
+        <div class="nav-oparea">
+          <dl>
+            <dt class="list-title">관리자 설정</dt>
+            <dd>
+              <ul>
+                <li class="menu-list"><a href="#">부서 관리</a></li>
+                <li class="menu-list"><a href="#">영업 담당자 관리</a></li>
+                <li class="menu-list"><a href="#">영업상품 관리</a></li>
+                <li class="menu-list"><a href="#">고객등급 관리</a></li>
+                <li class="menu-list"><a href="#">공지사항 관리</a></li>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+        </div>
+      </li>
+      <li class="nav-li">
+        <button type="button"><span class="client-icon"></span>
+        </button>
+        <div class="nav-oparea">
+          <dl>
+            <dt class="list-title">고객 관리</dt>
+            <dd>
+              <ul>
+                <li class="menu-list"><a href="#">고객 등록</a></li>
+                <li class="menu-list"><a href="#">고객 리스트</a></li>
+                <li class="menu-list"><a href="#">상담일정 캘린더</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+      </li>
+      <li class="nav-li">
+        <button type="button"><span class="calender-icon"></span>
+        </button>
+        <div class="nav-oparea">
+          <dl>
+            <dt class="list-title">영업 관리</dt>
+            <dd>
+              <ul>
+                <li class="menu-list"><a href="#">영업일지 현황</a></li>
+                <li class="menu-list"><a href="#">영업상품 현황</a></li>
+                <li class="menu-list"><a href="#">영업진행 현황</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+      </li>
+      <li class="nav-li">
+        <button type="button"><span class="graph-icon"></span>
+        </button>
+        <div class="nav-oparea">
+          <dl>
+            <dt class="list-title">통계관리</dt>
+            <dd>
+              <ul>
+                <li class="menu-list"><a href="#">통계 1</a></li>
+                <li class="menu-list"><a href="#">통계 2</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+      </li>
+    </ul>
   </nav>
+
   <main>
     <div class="dash-board">
        <p>대쉬보드 페이지 위치 정보 노출 단입니다.</p>
-       <p><span>VALUE</span>&nbsp;<span>UP!</span>&nbsp;v1.0</p>
+       <!-- <p><span>VALUE</span>&nbsp;<span>UP!</span>&nbsp;v1.0</p> -->
     </div>
 
     <section>
@@ -139,10 +185,10 @@
             <tr class="client-kind">
               <th scope="row"><span>고객 분류</span></th>
               <td>
-                <input type="checkbox">&nbsp;<span>학교</span>
-                <input type="checkbox">&nbsp;<span>협회·단체</span>
-                <input type="checkbox">&nbsp;<span>공공기관</span>
-                <input type="checkbox">&nbsp;<span>일반기업</span>
+                <input type="checkbox" onchange="checkboxGroup(this)">&nbsp;<span>학교</span>
+                <input type="checkbox" onchange="checkboxGroup(this)">&nbsp;<span>협회·단체</span>
+                <input type="checkbox" onchange="checkboxGroup(this)">&nbsp;<span>공공기관</span>
+                <input type="checkbox" onchange="checkboxGroup(this)">&nbsp;<span>일반기업</span>
               </td>
             </tr>
             <tr class="client-type">
@@ -194,9 +240,9 @@
             <tr class="residence">
               <th scope="row">주소</th>
               <td>
-                <input type="button" onclick=""  value="우편번호 검색">
-                <input type="text" placeholder="우편번호" readonly="">
-                <input type="text" placeholder="우편번호 검색을 통해서 주소를 선택해주세요." readonly="">
+                <input type="button" id="search-icon" onclick="daumCode()">
+                <input type="text" id="address1" onclick="daumCode()" placeholder="우편번호" readonly="">
+                <input type="text" id="address2" onclick="daumCode()" placeholder="우편번호 검색을 통해서 주소를 선택해주세요." readonly="">
                 <input type="text" placeholder="상세주소 입력" onfocus="this.placeholder = ''" onblur="this.placeholder='상세주소 입력'">
               </td>
             </tr>
@@ -219,5 +265,8 @@
     <span class="copyright">Copyright © WEDAS Company All Right Reserved.</span>
     </address>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
+

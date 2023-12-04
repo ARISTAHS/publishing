@@ -1,3 +1,31 @@
+// 영업 일지 작성일 최종 일수 스크립트 
+    //페이지 로드 후 실행
+document.addEventListener('DOMContentLoaded', ()=>{
+  const dateColorSpan = document.querySelector('#date-days');
+
+  if(dateColorSpan){
+    const matchResult = dateColorSpan.textContent.match(/\((\d+)\)/);
+
+    if(matchResult){
+      const day = parseInt(matchResult[1]);
+
+      // 기존 클래스를 모두 제거
+      dateColorSpan.classList.remove('date-color', 'blue-text', 'red-text');
+      if(day <= 15){
+        dateColorSpan.classList.add('date-color');
+        dateColorSpan.style.display = 'block';
+      }else if(16 <= day && day <= 30){
+        dateColorSpan.classList.add('blue-text');
+        dateColorSpan.style.display = 'block';
+      }else if(31 <= day){
+        dateColorSpan.classList.add('red-text');
+        dateColorSpan.style.display = 'block';
+      };
+    }
+  }
+   
+})
+    
 // 페이지 상단 이동
 const topBtn = document.querySelector('#footerArea .topMove');
 const handleScroll = () =>{
@@ -19,7 +47,7 @@ topBtn.onclick = (e) =>{
     behavior:'smooth'
   });
 };
-
+ 
 // nav 영역 
 const menuBtn = document.querySelector('.sideNav .menu');
 const sideArea = document.querySelector('.sideNav .nav-ul .nav-oparea');
@@ -81,6 +109,7 @@ document.querySelectorAll('.menu-list a').forEach(menuItem => {
     });
   })
 });
+ 
 
 //메모 창
 document.querySelectorAll('.memo-btn').forEach(memoBtn => {
@@ -116,7 +145,7 @@ document.querySelectorAll('.memo-btn').forEach(memoBtn => {
 //     memoBox.classList.remove('on');
 //   });
 // });
-
+ 
 
 //페이지 버튼
 const totalPage = 50; 
@@ -156,6 +185,7 @@ function showTr(index){
     nt.style.display = '';
   };
 };
+ 
 
 //키워드 박스 
 document.addEventListener('DOMContentLoaded', function() {
@@ -216,3 +246,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // ?????
   })
 })
+ 
+
