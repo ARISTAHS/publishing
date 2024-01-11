@@ -1,0 +1,33 @@
+@import url(common.css);
+
+#wrap{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.sign-up-container{
+  width: 800px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+  0 10px 10px rgba(0,0,0,0.22);
+}
+.sign-up-container h2{
+  font-size: 1.3em;
+}
+
+.sign-up-container fieldset ul{}
+.sign-up-container fieldset ul li{}
+.sign-up-container fieldset ul li input{
+  border-radius: 10px;
+}
+.sign-up-container .check_box{}
+.sign-up-container .check_box input{}
+.sign-up-container .check_box label{}
