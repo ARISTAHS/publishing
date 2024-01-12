@@ -8,79 +8,52 @@
 </head>
 <body>
   <div class="wrap" id="wrap">
-    <!-- 로그인 -->
-    <div class="sign-up-container">
-      <form action="#" method="post">
-        <h2 class="login_title"><span>포장의 민족</span>에 오신 것 을 환영합니다.</h2>
-        <fieldset>
-          <ul>
+    <div class="container">
+      <!-- 로그인 -->
+      <div class="sign-up-container">
+        <form action="#" method="post">
+          <h2 class="login_title"><span>포장의 민족</span>에 오신 것 을 환영합니다.</h2>
+          <fieldset>
+            <ul>
+              <li>
+                <input type="email" placeholder="이메일을 입력하세요" onblur="this.placeholder='이메일을 입력하세요'" onfocus="this.placeholder=''">
+              </li>
+              <li>
+                <input type="password" placeholder="비밀번호를 입력하세요" onblur="this.placeholder='비밀번호를 입력하세요'" onfocus="this.placeholder=''">
+              </li>
+            </ul>
+          </fieldset>
+          <div class="check_box">
+            <input type="checkbox" name="check">
+            <label for="check">이메일 기억하기</label>
+          </div>
+
+          <button class="login_btn"><span>로그인</span></button>
+        
+          <ul class="login_join">
             <li>
-              <input type="email" placeholder="이메일을 입력하세요" onblur="this.placeholder='이메일을 입력하세요'" onfocus="this.placeholder=''">
+              <p>Forgot your Email or Password?</p>
             </li>
             <li>
-              <input type="password" placeholder="비밀번호를 입력하세요" onblur="this.placeholder='비밀번호를 입력하세요'" onfocus="this.placeholder=''">
+              <a href="#"><span>이메일 찾기</span></a>
+              <a href="#"><span>비밀번호 찾기</span></a>
+              <!-- <a href="#"><span>회원가입</span></a> -->
             </li>
           </ul>
-        </fieldset>
-        <div class="check_box">
-          <input type="checkbox" name="check">
-          <label for="check">이메일 기억하기</label>
-        </div>
-        <button class="login_btn"><span>로그인</span></button>
-
-        <ul class="login_join">
-          <li><a href="#"><span>이메일 찾기</span></a></li>
-          <li><a href="#"><span>비밀번호 찾기</span></a></li>
-        </ul>
-      </form>
-    </div>
-    <!-- 로그인 end -->
-
-    <!-- 회원가입 -->
-    <!-- <div class="sign_in_container">
-      <form action="#">
-        <h2 class="sign_in_title"><span></span></h2>
-        <div class="social_login">
-          <a href="#"></a>
-          <a href="#"></a>
-          <a href="#"></a>
-        </div>
-        <span class="text"></span>
-        <fieldset>
-          <ul>
-            <li>
-              <input type="text">
-            </li>
-            <li>
-              <input type="email">
-            </li>
-            <li>
-              <input type="password">
-            </li>
-          </ul>
-        </fieldset>
-        <button class="sign_in_btn"><span>회원가입</span></button>
-      </form>
-    </div> -->
-    <!-- 회원갑입 end -->
-
-    <!-- overlay -->
-    <!-- <div class="overlay_container">
+        </form>
+      </div>
+      <!-- 로그인 end -->
+      
+      <!-- overlay -->
       <div class="overlay">
-        <div class="overlay_inner_left">
+        <div class="overlay_inner">
           <h2>반갑습니다!</h2>
           <p>비회원이시라면 회원가입 후 시작하세요.</p>
-          <button class="sign_in_click">계정만들기</button>
-        </div>
-        <div class="overlay_inner_right"> 
-          <h2>어서오세요!</h2>
-          <p>회원이시라면 로그인 후 이용해주세요.</p>
-          <button class="sign_up_click">로그인 가기</button>
+          <button class="sign_in_click">회원가입</button>
         </div>
       </div>
-    </div> -->
-    <!-- overlay end-->
-
+      <!-- overlay end-->
+    </div>
   </div>
   <script src="main.js"></script>
 </body>

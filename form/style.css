@@ -5,29 +5,113 @@
   height: 100%;
   position: relative;
 }
-.sign-up-container{
-  width: 800px;
+#wrap .container{
+  width: 1000px;
   height: auto;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 1px solid black;
-  border-radius: 30px;
-  padding: 30px;
-  text-align: left;
+  border-radius: 15px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
   0 10px 10px rgba(0,0,0,0.22);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.sign-up-container{
+  width: 50%;
+  height: 100%;
+  padding: 0 60px;
+  text-align: left;
 }
 .sign-up-container h2{
   font-size: 1.3em;
+  margin-bottom: 10px;
 }
-
-.sign-up-container fieldset ul{}
-.sign-up-container fieldset ul li{}
+.sign-up-container fieldset ul li{
+  padding-bottom: 20px;
+}
 .sign-up-container fieldset ul li input{
   border-radius: 10px;
+  height: 40px;
+  padding: 4px 10px;
+  background-color: #eee;
 }
-.sign-up-container .check_box{}
-.sign-up-container .check_box input{}
-.sign-up-container .check_box label{}
+.sign-up-container .check_box{
+  display: flex; 
+  align-items: center;
+  gap: 10px;
+  line-height: 14px;
+}
+.sign-up-container .check_box input{
+  width: 14px;
+  height: 14px;
+}
+.sign-up-container .check_box label{
+  font-size: 0.85em;
+  color: #666;
+}
+.sign-up-container button.login_btn{ 
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+  border: 1px solid #fff;
+  background: linear-gradient(to left, #FF4B2B, #FF416C);
+}
+.sign-up-container button.login_btn span{
+  font-weight: 500;
+  font-size: 0.9em;
+  color: #fefefe;
+}
+.sign-up-container .login_join{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+.sign-up-container .login_join p{
+  font-size: 0.85em;
+  color: #666;
+}
+.sign-up-container .login_join li:last-child{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.sign-up-container .login_join li:last-child a{
+  font-size: 0.85em;
+  color: #999;
+}
+.sign-up-container .login_join li:last-child a:first-child{
+  position: relative;
+}
+.sign-up-container .login_join li:last-child a:first-child::after{
+  content: '';
+  background-color: #666;
+  width: 1px;
+  height: 10px;
+  position: absolute;
+  top: 6px;
+  right: -8px;
+}
+
+/* overlay css */
+.overlay{
+  width: 50%;
+  height: 498px;
+  background-color: #deebff;
+  border-top-right-radius:15px; 
+  border-bottom-right-radius: 15px;
+  background: linear-gradient(to right, #FF4B2B, #FF416C);
+  position: relative;
+}
+.overlay .overlay_inner{
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
