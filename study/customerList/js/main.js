@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 const topBtn = document.querySelector('#footerArea .topMove');
 const handleScroll = () =>{
    //높이 계산 후 높이에 따라 영역 보이기
-  const sorollY = window.scrollY || document.documentElement.scrollTop;;
+  const sorollY = window.scrollY || document.documentElement.scrollTop;
   if( sorollY > 100 ){
     topBtn.style.opacity='1';
   }else{
