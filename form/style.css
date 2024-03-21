@@ -1,136 +1,134 @@
-@import url(common.css);
+@import './common.css';
 
 #wrap{
   width: 100%;
-  height: 100%;
-  position: relative;
-}
-#wrap .container{
-  width: 1000px;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid black;
-  border-radius: 15px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-  0 10px 10px rgba(0,0,0,0.22);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.sign-up-container{
-  width: 50%;
-  height: 100%;
-  padding: 0 60px;
-  text-align: left;
-}
-.sign-up-container h2{
-  font-size: 1.3em;
-  margin-bottom: 10px;
-}
-.sign-up-container fieldset ul li{
-  padding-bottom: 20px;
-}
-.sign-up-container fieldset ul li input{
-  border-radius: 10px;
-  height: 40px;
-  padding: 4px 10px;
-  background-color: #eee;
-}
-.sign-up-container .check_box{
-  display: flex; 
-  align-items: center;
-  gap: 10px;
-  line-height: 14px;
-}
-.sign-up-container .check_box input{
-  width: 14px;
-  height: 14px;
-}
-.sign-up-container .check_box label{
-  font-size: 0.85em;
-  color: #666;
-}
-.sign-up-container button.login_btn{ 
-  width: 100%;
-  height: 50px;
-  margin: 10px 0;
-  border: 1px solid #fff;
-  border-radius: 10px;
-  background: linear-gradient(to left, #FF4B2B, #FF416C);
-}
-.sign-up-container button.login_btn span{
-  font-weight: 400;
-  font-size: 16px;
-  color: #fefefe;
-}
-.sign-up-container .login_join{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-direction: column;
-}
-.sign-up-container .login_join p{
-  font-size: 0.85em;
-  color: #666;
-}
-.sign-up-container .login_join li:last-child{
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.sign-up-container .login_join li:last-child a{
-  font-size: 0.85em;
-  color: #999;
-}
-.sign-up-container .login_join li:last-child a:first-child{
-  position: relative;
-}
-.sign-up-container .login_join li:last-child a:first-child::after{
-  content: '';
-  background-color: #666;
-  width: 1px;
-  height: 10px;
-  position: absolute;
-  top: 6px;
-  right: -8px;
+    height: 100vh;
 }
 
-/* overlay css */
-.overlay{
-  width: 50%;
-  height: 498px;
-  background-color: #deebff;
-  border-top-right-radius:15px; 
-  border-bottom-right-radius: 15px;
-  background: linear-gradient(to right, #FF4B2B, #FF416C);
-  position: relative;
+.form_wrap{
+	height:100%; 
+	position:relative;
+	margin-top:130px;
 }
-.overlay .overlay_inner{
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.form_wrap .form_area{
+	width:550px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+
+	padding:65px 90px 65px;
+	border-radius:20px;
+	box-shadow:0 20px 30px rgba(225,225,225, .7), 0 -5px 10px rgba(225,225,225, .7);
+	background: #fff;
 }
-.overlay .overlay_inner h2{
-  font-size: 2.2em;
+.form_area form .tabMenu{
+	margin-bottom:20px;
 }
-.overlay .overlay_inner p{
-  margin: 15px 0;
-  font-size: 0.85em;
-  font-weight: 400;
+.form_area form .tabMenu ul{
+	display:flex;
 }
-.overlay .overlay_inner .sign_in_click{
-  width: 150px;
-  height: 45px;
-  border-radius: 10px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 400;
-  border: 1px solid #fff;
-  background: linear-gradient(to right, #FF4B2B, #FF416C);
+.form_area form .tabMenu ul li{
+	width:50%;
+	text-align:center;
+	background:#fff;
+}
+.form_area form .tabMenu ul li a{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	color: #333;
+	border:1px solid #999;
+	height:50px;
+	font-weight:500;
+
+}
+.form_area form .tabMenu ul li:nth-of-type(1) a{
+	border-right:none;
+}
+.form_area form .tabMenu ul li:nth-of-type(2) a{
+	border-left:none;
+}
+ /* tab 메뉴를 클릭했을때 li에 on클래스 추가*/
+.form_area form .tabMenu ul li.on{
+	background:#00519f;
+}
+.form_area form .tabMenu ul li.on a{
+	color:#fff;
+}
+
+/*.form_area form .text{margin-bottom:20px;}*/
+.form_area form .text ul{text-align:center}
+.form_area form .text ul li{
+	display:none;
+}
+.form_area form .text ul li p:nth-of-type(1){
+	font-size:1.1em;
+	margin-bottom:5px;
+} 
+.form_area form .text ul li p:nth-of-type(2){
+	font-size:.9em;
+	color:#666;
+} 
+.form_area form .text ul li.on{
+	display:block;
+}
+
+/*.form_area form .input_area{}*/
+.form_area form .input_area .input_wrap{
+	display:none;
+	}
+.form_area form .input_area .input_wrap.on{
+	display:block;
+}
+.form_area form .input_area input#userId,
+.form_area form .input_area input#userName,
+.form_area form .input_area input#birthDate,
+.form_area form .input_area input#phoneNum{
+	width:100%;
+	height:50px;
+	margin-top:10px;
+	padding: 0 20px;
+	outline:none;
+}
+.form_area form .input_area input#phoneNum{
+	width:75%;
+}
+.form_area form .input_area .check_btn{
+	width:23.5%;
+	height:50px;
+	margin-top:10px;
+	border-radius: 5px;
+	color: #fff;
+	border: 1px solid #00519f;
+	background-color: #00519f;
+}
+.form_area form .input_area .user_name,
+.form_area form .input_area .date,
+.form_area form .input_area .user_id,
+.form_area form .input_area .phone_num,
+.form_area form .input_area .etc_btn{
+	margin-top:30px;
+}
+.form_area form .input_area .etc_btn{
+	display:flex;
+	gap:10px;
+	justify-content:space-between;
+}
+.form_area form .input_area .etc_btn a.cancel_btn{
+	width:calc(50% - 10px);
+	display:flex;
+	height:50px;
+	align-items:center;
+	justify-content:center;
+	border-radius:5px;
+	border: 1px solid #a3b1b7;
+}
+.form_area form .input_area .etc_btn .check_btn2{
+	width:calc(50% - 10px);
+	height:50px;
+	border-radius:5px;
+	border: 1px solid #00519f;
+	background-color: #00519f;
+	color:#fff;
 }
