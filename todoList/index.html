@@ -7,15 +7,19 @@
   <link rel="stylesheet" href="./reset.css">
 </head>
 <body>
-  
-  <h1></h1>
-  <input type="text" id="todo">
-  <button id="addbtn">추가</button>
 
-  <div id="todoList">
-    <input type="checkbox">
-    <span>text</span>
-    <button id="dealBtn">삭제</button>
+  <div id="wrap">
+    <h1>TodoList</h1>
+    <div id="todo_container">
+      <input type="text" id="todo" placeholder="할일 입력하기">
+      <button id="addBtn">추가</button>
+    </div>
+
+    <div id="todoList">
+      <input type="checkbox">
+      <span>text</span>
+      <button id="dealBtn">삭제</button>
+    </div>
   </div>
 
   <script src="./main.js"></script>
