@@ -16,19 +16,19 @@ body{
   padding: 30px 20px;
 }
 
-#todo_container{
+#todoForm{
   margin-bottom: 20px;
 }
-#todo_container #todo{
+#todoForm #todo{
   width: calc(100% - 45px);
   border: 1px solid #eee;
   border-radius: 4px;
   padding: 10px;
 }
-#todo_container #todo:focus{
+#todoForm #todo:focus{
   outline: none;
 }
-#todo_container #addBtn{
+#todoForm #addBtn{
   position: relative;
   width: 35px;
   height: 35px;
@@ -38,7 +38,7 @@ body{
   cursor: pointer;
   vertical-align: middle;
 }
-#todo_container #addBtn span{
+#todoForm #addBtn span{
   display: block;
     width: 2px;
     height: 15px;
@@ -48,6 +48,6 @@ body{
     top: 50%;
     left: 50%;
 }
-#todo_container #addBtn span:last-child{
+#todoForm #addBtn span:last-child{
   transform: translate(-50%,-50%) rotate(-90deg);
 }
