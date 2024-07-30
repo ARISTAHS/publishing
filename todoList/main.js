@@ -21,9 +21,9 @@ function addTodo(){
     delBtn.addEventListener('click', delTodo);
   }
   
-  todoInput.value = '';
-  todoInput.focus(); 
-  result.addEventListener('click', 
+  todoInput.value = ''; //목록 추가 후 입력창 초기화
+  todoInput.focus(); //커서 강제 포커스
+  result.addEventListener('click',   //추가 된 목록 list를 클릭시 밑줄 효과 추가
     function(){
       result.style.textDecoration = "line-through";
     }
