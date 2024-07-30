@@ -67,3 +67,8 @@ body{
   float: right;
   cursor: pointer;
 }
+#todoList li::after{
+  content: '';
+  display: block;
+  clear: both;
+}

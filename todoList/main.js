@@ -5,13 +5,13 @@ let todoInput = document.getElementById('todo');
 //목록 추가
 function addTodo(){
 
+  let result = document.createElement('li');
+  console.log(result);
+  let delBtn = document.createElement('button');
+
   if(todoInput.value == false){
     alert('할일을 입력하세요');
   }else{
-    let result = document.createElement('li');
-    console.log(result);
-    let delBtn = document.createElement('button');
-
     result.innerHTML = todoInput.value;
     list.appendChild(result);
 
@@ -19,10 +19,15 @@ function addTodo(){
     console.log(delBtn);
     delBtn.innerText = '🙌';
     delBtn.addEventListener('click', delTodo);
-    
   }
   
-
+  todoInput.value = '';
+  todoInput.focus(); 
+  result.addEventListener('click', 
+    function(){
+      result.style.textDecoration = "line-through";
+    }
+  )
 
 }
 
