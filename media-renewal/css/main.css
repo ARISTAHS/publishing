@@ -1,0 +1,34 @@
+@import url(common.css);
+
+#wrap{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+header{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo{
+  display: block;
+  margin-left: 20px;
+}
+header .logo img{
+  width: 100%;
+  height: 100%;
+}
+header nav{margin-right: 20px;}
+header nav ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav ul li a{
+  display: block;
+  width: 100px;
+  height: 100%;
+  text-align: center;
+}
